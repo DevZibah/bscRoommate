@@ -1,0 +1,307 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+body {
+  /* border: 1px solid red; */
+  font-size: 18px;
+  color: black;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  body {
+    border: 1px solid blue;
+    font-size: 18px;
+    color: black;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .firstdiv {
+    border: 1px solid white;
+    padding: 1rem;
+  }
+  .ham {
+    color: rgb(108, 99, 255);
+  }
+  .logo {
+    color: rgb(108, 99, 255);
+    font-family: fantasy;
+  }
+  .image-one {
+    border: 1px solid white;
+    width: 100%;
+  }
+  .image1 {
+    width: 100%;
+    padding: 2rem;
+  }
+  .firstart {
+    border: 1px solid rgb(230, 230, 230);
+    padding: 1.3rem;
+    background-color: rgb(230, 230, 230);
+  }
+  .firstart h4 {
+    font-weight: 700;
+  }
+  .firstart p {
+    text-align: justify;
+  }
+  .firstart button {
+    border: 1px solid rgb(108, 99, 255);
+    background-color: rgb(108, 99, 255);
+    padding: 0.5rem;
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    color: white;
+  }
+  .section-one {
+    border: 1px solid white;
+    padding: 2rem;
+  }
+  .section-one h4 {
+    font-weight: 700;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
+  .image-two {
+    border: 1px solid white;
+    width: 100%;
+  }
+  .image2 {
+    width: 100%;
+    padding: 2rem;
+  }
+  .grid-div {
+    border: 1px solid white;
+  }
+  .grid-div p {
+    text-align: justify;
+  }
+  .ano-sec {
+    border: 1px solid white;
+    background-color: rgb(230, 230, 230);
+  }
+  .ano-image {
+    border: 1px solid rgb(230, 230, 230);
+    width: 100%;
+  }
+  .ano-image img {
+    width: 100%;
+    padding: 5rem;
+  }
+  .grid-one {
+    border: 1px solid rgb(230, 230, 230);
+    margin-top: -4rem;
+  }
+  .grid-one h4 {
+    text-align: start;
+    font-weight: 700;
+  }
+  .grid-one small {
+    text-align: start;
+    color: gray;
+    font-weight: 700;
+  }
+  .grid1 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    text-align: start;
+  }
+  .facheck {
+    color: rgb(108, 99, 255);
+  }
+  .smal1 {
+    text-align: start;
+  }
+  .grid-one button {
+    border: 1px solid rgb(108, 99, 255);
+    background-color: rgb(108, 99, 255);
+    padding: 0.5rem;
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    color: white;
+  }
+  .butn {
+    border: 1px solid rgb(230, 230, 230);
+    text-align: start;
+  }
+  footer {
+    border: 1px solid rgb(108, 99, 255);
+    text-align: start;
+    background-color: rgb(108, 99, 255);
+    color: whitesmoke;
+    margin-bottom: -1.7rem;
+  }
+  footer h4 {
+    font-family: fantasy;
+  }
+  footer ul {
+    text-decoration: none;
+    list-style-type: none;
+  }
+  .cc-ul {
+    border: 1px solid white;
+    /* text-align: start; */
+  }
+  .cc-ul .signup button {
+    color: rgb(108, 99, 255);
+    border: 3px dotted whitesmoke;
+    padding: 0.4rem;
+    width: 50%;
+    border-radius: 10%;
+    background-color: white;
+  }
+  .form {
+    border: 1px solid rgb(193, 193, 221);
+    background-color: rgb(193, 193, 221);
+    margin-bottom: -1.7rem;
+    /* opacity: .6; */
+  }
+  .form-div {
+    height: auto;
+    width: 100%;
+    position: relative;
+    padding: 30px;
+    border-radius: 30px;
+    background: linear-gradient(
+      30deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.4)
+    );
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 999;
+  }
+  .form-div h2 {
+    font-size: 45px;
+    margin: 30px 0;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgb(108, 99, 255);
+  }
+  .form-div input {
+    height: 50px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.3)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 8px 0;
+    padding: 0 20px;
+    font-size: 18px;
+    border-radius: 7px;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+  }
+  .form-div input::placeholder {
+    color: #ffffff;
+  }
+  .form-div input[type='submit'] {
+    background: rgb(108, 99, 255);
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    border: none;
+    box-shadow: none;
+  }
+  .form-div p {
+    color: #fff;
+  }
+  .form-div p a {
+    color: rgb(108, 99, 255);
+  }
+  .form1 {
+    border: 1px solid rgb(193, 193, 221);
+    background-color: rgb(193, 193, 221);
+    margin-bottom: -1.8rem;
+    /* opacity: .6; */
+  }
+  .form-div1 {
+    margin-bottom: 1rem;
+    height: auto;
+    width: 100%;
+    position: relative;
+    padding: 30px;
+    border-radius: 30px;
+    background: linear-gradient(
+      30deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.4)
+    );
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 999;
+  }
+  .form1 h1 {
+    font-size: 45px;
+    margin: 30px 0;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgb(108, 99, 255);
+  }
+  .form-div1 input {
+    height: 50px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.3)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 8px 0;
+    padding: 0 20px;
+    font-size: 18px;
+    border-radius: 7px;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+  }
+  .form-div1 input::placeholder {
+    color: #ffffff;
+  }
+  .form-div1 input[type='submit'] {
+    background: rgb(108, 99, 255);
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    border: none;
+    box-shadow: none;
+  }
+  .form-div1 p {
+    color: #fff;
+  }
+  .form-div1 p a {
+    color: rgb(108, 99, 255);
+  }
+  .home {
+    border: 1px solid red;
+    width: 100%;
+  }
+  .home img {
+    width: 100%;
+  }
+}
