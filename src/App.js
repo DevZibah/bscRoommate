@@ -4,7 +4,8 @@ import Cover from './components/Cover'
 import './style/All.css'
 import Login from './components/Login'
 import Dashboard from './components/Dashboard'
-import Profee from './components/Profee'
+import Usersprofile from './components/Usersprofile'
+import Logout from './components/Logout'
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
         <Route exact path='/' component={Cover} />
         <Route exact path='/SignUp' component={SignUp} />
         <Route exact path='/Login' component={Login} />
+        <Route exact path='/Logout' component={Logout} />
         <Route exact path='/Dashboard' component={Dashboard} />
-        <Route exact path='/Profee' component={Profee} />
+        <Route exact path='/Usersprofile' component={Usersprofile} />
       </Switch>
     </div>
   )

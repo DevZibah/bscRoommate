@@ -1,17 +1,16 @@
 import React, { useState, useEffect, Fragment, useContext } from 'react'
-import Logout from './Logout'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 
 const Dashboard = () => {
   const [username, setUserName] = useState('')
   const [loading, setLoading] = useState(true)
   const [state, setState] = useState([])
   const [loading1, setLoading1] = useState(true)
-  // console.log(state)
+  console.log(state)
   const itemauthor = state.filter((item) => {
-    return item.username === username
+    return item.alias === username
   })
   console.log(itemauthor)
-  // console.log(state)
   useEffect(() => {
     //  checks to see if a user is authenticated in line 9
     if (localStorage.getItem('token') === null) {
@@ -27,7 +26,7 @@ const Dashboard = () => {
         .then((res) => res.json())
         .then((data) => {
           setState(data)
-          console.log(state);
+          console.log(data)
           setLoading1(false)
         })
     }
@@ -48,7 +47,7 @@ const Dashboard = () => {
         .then((data) => {
           setUserName(data.username)
           setLoading(false)
-          console.log(data.username)
+          console.log(data)
         })
     }
   }, [])
@@ -56,15 +55,15 @@ const Dashboard = () => {
     <div className='text-dark'>
       {loading === false && (
         <Fragment>
-          <Logout />
           <h1>Dashboard</h1>
           {itemauthor.map((item) => (
             <div>
-              <h2>hello {item.username}!</h2>
+              <h2>hello {item.alias}!</h2>
             </div>
           ))}
         </Fragment>
       )}
+      <Link to='/Logout'>Logout</Link>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
+
 const Signup = () => {
   const [email, setEmail] = useState('')
   const [username, setUsername] = useState('')
@@ -32,7 +33,7 @@ const Signup = () => {
         if (data.key) {
           localStorage.clear()
           localStorage.setItem('token', data.key)
-          window.location.replace('http://localhost:3000/profee')
+          window.location.replace('http://localhost:3000/usersprofile')
         } else {
           setUsername('')
           setEmail('')
@@ -46,6 +47,7 @@ const Signup = () => {
 
   return (
     <div className='form p-4'>
+      {/* <Navbar /> */}
       {loading === false && <h1>Signup</h1>}
       {errors === true && <h2>Cannot signup with provided credentials</h2>}
       <div className='form-div'>

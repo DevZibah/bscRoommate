@@ -17,7 +17,7 @@ body {
 }
 @media (max-width: 768px) {
   body {
-    border: 1px solid blue;
+    border: 1px solid white;
     font-size: 18px;
     color: black;
     width: 100%;
@@ -298,10 +298,38 @@ body {
     color: rgb(108, 99, 255);
   }
   .home {
-    border: 1px solid red;
+    border: 1px solid rgb(230, 230, 230);
     width: 100%;
+    padding: 1rem;
   }
   .home img {
+    border-radius: 5%;
     width: 100%;
+  }
+  .profileform{
+    border: 1px solid white;
+    background-color: rgb(230, 230, 230);
+  }
+  .username{
+    border: 1px solid white;
+    border-radius: 12px;
+    background-color: white;
+    text-align: start;
+  }
+  .forrm{
+    border: 1px solid rgb(230, 230, 230);
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .hint{
+    color: red;
+  }
+  .hints{
+    font-family:monospace;
+  }
+  .buttoon input{
+    border: 1px solid rgb(108, 99, 255);
+    padding: 10px;
+    border-radius: 12px;
+    background-color: rgb(108, 99, 255);
   }
 }

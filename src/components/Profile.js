@@ -1,130 +1,107 @@
 import React, { useState } from 'react'
-import home from '../assets/home.jpg'
+
 const Profile = () => {
-  const [female, setFemale] = useState('')
-  const [male, setMale] = useState('')
-  const [birthdate, setBirthdate] = useState('')
-  const [arts, setArts] = useState('')
-  const [science, setScience] = useState('')
-  const [IT, setIt] = useState('')
-  const [commercial, setCommercial] = useState('')
-  const [christianity, setChristianity] = useState('')
-  const [muslim, setMuslim] = useState('')
-  const [other, setOther] = useState('')
-  const [AB, setAb] = useState('')
-  const [AD, setAd] = useState('')
-  const [AI, setAi] = useState('')
-  const [AN, setAn] = useState('')
-  const [BA, setBa] = useState('')
-  const [BY, setBy] = useState('')
-  const [BN, setBn] = useState('')
-  const [BR, setBr] = useState('')
-  const [CR, setCr] = useState('')
-  const [DL, setDl] = useState('')
-  const [EB, setEb] = useState('')
-  const [ED, setEd] = useState('')
-  const [EK, setEk] = useState('')
-  const [EN, setEn] = useState('')
-  const [GM, setGm] = useState('')
-  const [IM, setIm] = useState('')
-  const [JI, setJi] = useState('')
-  const [KA, setKa] = useState('')
-  const [KN, setKn] = useState('')
-  const [KS, setKs] = useState('')
-  const [KB, setKb] = useState('')
-  const [KG, setKg] = useState('')
-  const [KW, setKw] = useState('')
-  const [LA, setLa] = useState('')
-  const [NA, setNa] = useState('')
-  const [NI, setNi] = useState('')
-  const [OG, setOg] = useState('')
-  const [ON, setOn] = useState('')
-  const [OS, setOs] = useState('')
-  const [OY, setOy] = useState('')
-  const [PT, setPt] = useState('')
-  const [RV, setRv] = useState('')
-  const [ST, setSt] = useState('')
-  const [TB, setTb] = useState('')
-  const [YB, setYb] = useState('')
-  const [ZF, setZf] = useState('')
-  const [FC, setFc] = useState('')
-  const [loudchewing, setLoudchewing] = useState('')
-  const [beinglate, setBeinglate] = useState('')
-  const [talkingduringamovie, setTalkingduringamovie] = useState('')
-  const [talkingwhenyourmouthisfull, setTalkingwhenyourmouthisfull] =
-    useState('')
-  const [leavingthewaterrunning, setLeavingthewaterrunning] = useState('')
-  const [smoking, setSmoking] = useState('')
-  const [leavingdirtydishesinthesink, setLeavingdirtydishesinthesink] =
-    useState('')
-  const [
-    sneezingwithoutcoveringyourmouth,
-    setSneezingwithoutcoveringyourmouth,
-  ] = useState(false)
-  const [littering, setLittering] = useState(false)
-  const [bitingnails, setBitingnails] = useState(false)
-  const [snoring, setSnoring] = useState(false)
-  const [leavingthetoiletseatup, setLeavingthetoiletseatup] = useState(false)
+  const [alias, setAlias] = useState('')
+  const [firstname, setFirstname] = useState('')
+  const [lastname, setLastname] = useState('')
+  const [age, setAge] = useState('')
+  const [state, setState] = useState('')
+  const [area, setArea] = useState('')
+  const [email, setEmail] = useState('')
+  const [genders, setGenders] = useState('')
+
+  // const [image, setImage] = useState('')
+  // const [female, setFemale] = useState('')
+  // const [male, setMale] = useState('')
+  // const [eighteentotwentyseven, setEighteentotwentyseven] = useState('')
+  // const [twentyeighttothrityfive, setTwentyeighttothrityfive] = useState('')
+  // const [thirtysixtofifty, setThirtysixtofifty] = useState('')
+  // const [christianity, setChristianity] = useState('')
+  // const [muslim, setMuslim] = useState('')
+  // const [other, setOther] = useState('')
+  // const [science, setScience] = useState('')
+  // const [IT, setIt] = useState('')
+  // const [commercial, setCommercial] = useState('')
+  // const [arts, setArts] = useState('')
+  // const [female1, setFemale1] = useState('')
+  // const [male1, setMale1] = useState('')
+  // const [smoking, setSmoking] = useState('')
+  // const [alcoholintake, setAlcoholintake] = useState('')
+  // const [uncleanliness, setUncleanliness] = useState('')
+  // const [lateness, setLateness] = useState('')
+  // const [homepartying, setHomepartying] = useState('')
   const [errors, setErrors] = useState(false)
+
   //   Upon successful registration, the user will receive an authentication token from the request. This token will be used to authenticate them instead of having them go to the login.
   const onSubmit = (e) => {
     e.preventDefault()
     const user = {
-      female: female,
-      male: male,
-      birthdate: birthdate,
-      arts: arts,
-      science: science,
-      IT: IT,
-      commercial: commercial,
-      christianity: christianity,
-      muslim: muslim,
-      other: other,
-      loudchewing: loudchewing,
-      beinglate: beinglate,
-      talkingduringamovie: talkingduringamovie,
-      talkingwhenyourmouthisfull: talkingwhenyourmouthisfull,
-      leavingthewaterrunning: leavingthewaterrunning,
-      smoking: smoking,
-      leavingdirtydishesinthesink: leavingdirtydishesinthesink,
-      sneezingwithoutcoveringyourmouth: sneezingwithoutcoveringyourmouth,
-      littering: littering,
-      bitingnails: bitingnails,
-      snoring: snoring,
-      leavingthetoiletseatup: leavingthetoiletseatup,
+      alias: alias,
+      firstname: firstname,
+      lastname: lastname,
+      age: age,
+      state: state,
+      area: area,
+      email: email,
+      genders: genders
+      // image: image,
+      // female: female,
+      // male: male,
+      // eighteentotwentyseven: eighteentotwentyseven,
+      // twentyeighttothrityfive: twentyeighttothrityfive,
+      // thirtysixtofifty: thirtysixtofifty,
+      // christianity: christianity,
+      // muslim: muslim,
+      // other: other,
+      // science: science,
+      // IT: IT,
+      // commercial: commercial,
+      // arts: arts,
+      // female1: female1,
+      // male1: male1,
+      // smoking: smoking,
+      // alcoholintake: alcoholintake,
+      // uncleanliness: uncleanliness,
+      // lateness: lateness,
+      // homepartying: homepartying,
     }
-    // var url = 'http://127.0.0.1:8000/api/v1/'
-    fetch('http://127.0.0.1:8000/api/v1/', {
+    var url = 'http://127.0.0.1:8000/api/v1/'
+    fetch(url, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
-        Authorization: `Token ${localStorage.getItem('token')}`,
+        authorization: `Token ${localStorage.getItem('token')}`,
       },
       body: JSON.stringify(user),
     })
       .then((response) => {
-        setFemale('')
-        setMale('')
-        setBirthdate('')
-        setArts('')
-        setScience('')
-        setIt('')
-        setCommercial('')
-        setChristianity('')
-        setMuslim('')
-        setOther('')
-        setLoudchewing('')
-        setBeinglate('')
-        setTalkingduringamovie('')
-        setTalkingwhenyourmouthisfull('')
-        setLeavingthewaterrunning('')
-        setSmoking('')
-        setLeavingdirtydishesinthesink('')
-        setSneezingwithoutcoveringyourmouth('')
-        setLittering('')
-        setBitingnails('')
-        setSnoring('')
-        setLeavingthetoiletseatup('')
+        setFirstname('')
+        setAlias('')
+        setLastname('')
+        setAge('')
+        setState('')
+        setArea('')
+        setEmail('')
+        // setImage('')
+        // setFemale('')
+        // setMale('')
+        // setEighteentotwentyseven('')
+        // setTwentyeighttothrityfive('')
+        // setThirtysixtofifty('')
+        // setChristianity('')
+        // setMuslim('')
+        // setOther('')
+        // setScience('')
+        // setIt('')
+        // setCommercial('')
+        // setArts('')
+        // setFemale1('')
+        // setMale1('')
+        // setSmoking('')
+        // setAlcoholintake('')
+        // setUncleanliness('')
+        // setLateness('')
+        // setHomepartying('')
         window.alert('profile created successfully')
         window.location.replace('http://localhost:3000/dashboard')
         setErrors(true)
@@ -135,369 +112,284 @@ const Profile = () => {
   }
   return (
     <div>
-      <div className='home'>
-        <img src={home} alt='home' />
-      </div>
+      {/* {loading === false && <h1>Profile</h1>} */}
+      {/* {errors === true && <h2>Cannot signup with provided credentials</h2>} */}
       <form onSubmit={onSubmit} className='text-dark'>
-        <div>
-          <div className='form-check'>
-            <input
-              className='form-check-input'
-              type='radio'
-              name='exampleRadios'
-              id='exampleRadios1'
-              value={female}
-              onChange={(e) => setFemale(e.target.value)}
-            />
-            <label className='form-check-label' htmlFor='exampleRadios1'>
-              Female
-            </label>
-          </div>
-          <div className='form-check'>
-            <input
-              className='form-check-input'
-              type='radio'
-              name='exampleRadios'
-              id='exampleRadios2'
-              value={male}
-              onChange={(e) => setMale(e.target.value)}
-            />
-            <label className='form-check-label' htmlFor='exampleRadios2'>
-              Male
-            </label>
-          </div>
-          {/* <input
-            name='female'
-            id='html'
-            type='radio'
-            value={female}
-            onChange={(e) => setFemale(e.target.value)}
-            required
-          />{' '}
-          <label htmlFor='html'>female:</label> <br /> */}
-          <br />
-          {/* <input
-            name='gender'
-            type='radio'
-            id='css'
-            value={male}
-            onChange={(e) => setMale(e.target.value)}
-            required
-          />{' '}
-          <label htmlFor='css'>male:</label> <br /> */}
-        </div>
-        <br />
-        <label htmlFor='birthdate'>Birth date:</label> <br />
+        <label htmlFor='alias'>Username:</label> <br />
         <input
-          name='birthdate'
-          type='date'
-          id='birthdate'
-          value={birthdate}
-          onChange={(e) => setBirthdate(e.target.value)}
+          name='alias'
+          type='text'
+          id='alias'
+          value={alias}
+          onChange={(e) => setAlias(e.target.value)}
+          required
+        />{' '}
+        <br />
+        <label htmlFor='firstname'>firstname:</label> <br />
+        <input
+          name='firstname'
+          type='text'
+          value={firstname}
+          onChange={(e) => setFirstname(e.target.value)}
+          required
+        />{' '}
+        <br />
+        <label htmlFor='lastname'>lastname:</label> <br />
+        <input
+          name='lastname'
+          type='text'
+          value={lastname}
+          onChange={(e) => setLastname(e.target.value)}
+          required
+        />{' '}
+        <br />
+        <label htmlFor='age'>age:</label> <br />
+        <input
+          name='age'
+          type='number'
+          value={age}
+          onChange={(e) => setAge(e.target.value)}
+          required
+        />{' '}
+        <br />
+        <label htmlFor='state'>state:</label> <br />
+        <input
+          name='state'
+          type='text'
+          value={state}
+          onChange={(e) => setState(e.target.value)}
+          required
+        />{' '}
+        <br />
+        <label htmlFor='area'>area:</label> <br />
+        <input
+          name='area'
+          type='text'
+          value={area}
+          onChange={(e) => setArea(e.target.value)}
+          required
+        />{' '}
+        <br />
+        <label htmlFor='email'>email:</label> <br />
+        <input
+          name='email'
+          type='email'
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />{' '}
+        <br />
+        <div className='container p-5'>
+          <select
+            className='custom-select'
+            value={genders}
+            onChange={(e) => {
+              const selectedGender = e.target.value
+              setGenders(selectedGender)
+            }}
+          >
+            <option value='FEMALE'>FEMALE</option>
+            <option value='MALE'>MALE</option>
+          </select>
+        </div>
+        {/* <label htmlFor='image'>image:</label> <br />
+        <input
+          name='image'
+          type='image'
+          value={image}
+          onChange={(e) => setImage(e.target.value)}
           required
         />{' '}
         <br />
         <div>
-          <small>Select your discipline here:</small>
           <input
-            name='fields'
             type='radio'
-            id='arts'
-            value={arts}
-            onChange={(e) => setArts(e.target.value)}
-            required
+            id='css'
+            name='gender'
+            value={female}
+            onChange={(e) => setFemale(e.target.value)}
           />{' '}
-          <label htmlFor='arts'>arts:</label> <br />
+          <label htmlFor='css'>Female</label>
           <br />
           <input
-            name='fields'
             type='radio'
-            id='science'
-            value={science}
-            onChange={(e) => setScience(e.target.value)}
-            required
+            id='html'
+            name='gender'
+            value={male}
+            onChange={(e) => setMale(e.target.value)}
           />{' '}
-          <label htmlFor='science'>science:</label> <br />
+          <label htmlFor='html'>Male</label>
           <br />
-          <input
-            name='fields'
-            type='radio'
-            id='it'
-            value={IT}
-            onChange={(e) => setIt(e.target.value)}
-            required
-          />{' '}
-          <label htmlFor='it'>IT:</label> <br />
-          <br />
-          <input
-            name='fields'
-            type='radio'
-            id='commercial'
-            value={commercial}
-            onChange={(e) => setCommercial(e.target.value)}
-            required
-          />{' '}
-          <label htmlFor='commercial'>commercial:</label> <br />
         </div>
-        <br />
         <div>
-          <small>Select your religion here:</small>
+          <small>select your preferred age group</small>
           <input
-            name='religion'
+            type='radio'
+            id='eighteentotwentyseven'
+            name='age'
+            value={eighteentotwentyseven}
+            onChange={(e) => setEighteentotwentyseven(e.target.value)}
+          />{' '}
+          <label htmlFor='eighteentotwentyseven'>eighteentotwentyseven</label>
+          <br />
+          <input
+            type='radio'
+            id='twentyeighttothrityfive'
+            name='age'
+            value={twentyeighttothrityfive}
+            onChange={(e) => setTwentyeighttothrityfive(e.target.value)}
+          />{' '}
+          <label htmlFor='twentyeighttothrityfive'>
+            twentyeighttothrityfive
+          </label>
+          <br />
+          <input
+            type='radio'
+            id='thirtysixtofifty'
+            name='age'
+            value={thirtysixtofifty}
+            onChange={(e) => setThirtysixtofifty(e.target.value)}
+          />{' '}
+          <label htmlFor='thirtysixtofifty'>thirtysixtofifty</label>
+          <br />
+        </div>
+        <div>
+          <small>select your religion</small>
+          <input
             type='radio'
             id='christianity'
+            name='religion'
             value={christianity}
             onChange={(e) => setChristianity(e.target.value)}
-            required
           />{' '}
-          <label htmlFor='christianity'>christianity:</label> <br />
+          <label htmlFor='christianity'>christianity</label>
           <br />
           <input
-            name='religion'
             type='radio'
             id='muslim'
+            name='religion'
             value={muslim}
             onChange={(e) => setMuslim(e.target.value)}
-            required
           />{' '}
-          <label htmlFor='muslim'>muslim:</label> <br />
+          <label htmlFor='muslim'>muslim</label>
           <br />
           <input
-            name='religion'
             type='radio'
             id='other'
+            name='religion'
             value={other}
             onChange={(e) => setOther(e.target.value)}
-            required
           />{' '}
-          <label htmlFor='other'>other:</label> <br />
+          <label htmlFor='other'>other</label>
+          <br />
         </div>
-        <br />
-        <small>select your location:</small>
-        <div className='input-group mb-3'>
-          <div className='input-group-prepend'>
-            <label className='input-group-text' htmlFor='inputGroupSelect01'>
-              Options
-            </label>
-          </div>
-          <select className='custom-select' id='inputGroupSelect01'>
-            <option defaultValue>Choose...</option>
-            <option value={AB}>Abia</option>
-            <option value={AD}>Adamawa</option>
-            <option value={AI}>Akwa Ibom</option>
-            <option value={AN}>Anambra</option>
-            <option value={BA}>Bauchi</option>
-            <option value={BY}>Bayelsa</option>
-            <option value={BN}>Benue</option>
-            <option value={BR}>Borno</option>
-            <option value={CR}>Cross River</option>
-            <option value={DL}>Delta</option>
-            <option value={EB}>Ebonyi</option>
-            <option value={ED}>Edo</option>
-            <option value={EK}>Ekiti</option>
-            <option value={EN}>Enugu</option>
-            <option value={GM}>Gombe</option>
-            <option value={IM}>Imo</option>
-            <option value={JI}>Jigawa</option>
-            <option value={KA}>Kaduna</option>
-            <option value={KN}>Kano</option>
-            <option value={KS}>Kastina</option>
-            <option value={KB}>Kebbi</option>
-            <option value={KG}>Kogi</option>
-            <option value={KW}>Kwara</option>
-            <option value={LA}>:Lagos</option>
-            <option value={NA}>Nassarawa</option>
-            <option value={NI}>Niger</option>
-            <option value={OG}>Ogun</option>
-            <option value={ON}>Ondo</option>
-            <option value={OS}>Osun</option>
-            <option value={OY}>Oyo</option>
-            <option value={PT}>Plateau</option>
-            <option value={RV}>Rivers</option>
-            <option value={ST}>Sokoto</option>
-            <option value={TB}>Taraba</option>
-            <option value={YB}>Yobe</option>
-            <option value={ZF} onChange={(e) => setZf(e.target.value)}>
-              Zamfara
-            </option>
-            <option value={FC} onChange={(e) => setFc(e.target.value)}>
-              FCT
-            </option>
-          </select>
-        </div>
-        {/* <select id='country-state' name='country-state'>
-          <option value={AB}>Abia</option>
-          <option value={AD}>Adamawa</option>
-          <option value={AI}>Akwa Ibom</option>
-          <option value={AN}>Anambra</option>
-          <option value={BA}>Bauchi</option>
-          <option value={BY}>Bayelsa</option>
-          <option value={BN}>Benue</option>
-          <option value={BR}>Borno</option>
-          <option value={CR}>Cross River</option>
-          <option value={DL}>Delta</option>
-          <option value={EB}>Ebonyi</option>
-          <option value={ED}>Edo</option>
-          <option value={EK}>Ekiti</option>
-          <option value={EN}>Enugu</option>
-          <option value={GM}>Gombe</option>
-          <option value={IM}>Imo</option>
-          <option value={JI}>Jigawa</option>
-          <option value={KA}>Kaduna</option>
-          <option value={KN}>Kano</option>
-          <option value={KS}>Kastina</option>
-          <option value={KB}>Kebbi</option>
-          <option value={KG}>Kogi</option>
-          <option value={KW}>Kwara</option>
-          <option value={LA}>:Lagos</option>
-          <option value={NA}>Nassarawa</option>
-          <option value={NI}>Niger</option>
-          <option value={OG}>Ogun</option>
-          <option value={ON}>Ondo</option>
-          <option value={OS}>Osun</option>
-          <option value={OY}>Oyo</option>
-          <option value={PT}>Plateau</option>
-          <option value={RV}>Rivers</option>
-          <option value={ST}>Sokoto</option>
-          <option value={TB}>Taraba</option>
-          <option value={YB}>Yobe</option>
-          <option value={ZF} onChange={(e) => setZf(e.target.value)}>
-            Zamfara
-          </option>
-          <option value={FC} onChange={(e) => setFc(e.target.value)}>
-            FCT
-          </option>
-        </select> */}
-        <br />
         <div>
-          <small>Check the boxes that describes your dislikes:</small>
+          <small>select your field</small>
           <input
-            name='loudchewing'
-            type='checkbox'
-            id='loudchewing'
-            value={loudchewing}
-            onChange={(e) => setLoudchewing(e.target.value)}
-            required
+            type='radio'
+            id='science'
+            name='field'
+            value={science}
+            onChange={(e) => setScience(e.target.value)}
           />{' '}
-          <label htmlFor='loudchewing'>loud chewing:</label> <br />
-          <input
-            name='beinglate'
-            type='checkbox'
-            id='beinglate'
-            value={beinglate}
-            onChange={(e) => setBeinglate(e.target.value)}
-            required
-          />{' '}
-          <label htmlFor='beinglate'>Being late:</label> <br />
-          <input
-            name='talkingduringamovie'
-            type='checkbox'
-            id='talkingduringamovie'
-            value={talkingduringamovie}
-            onChange={(e) => setTalkingduringamovie(e.target.value)}
-            required
-          />{' '}
-          <label htmlFor='talkingduringamovie'>talking during a movie:</label>{' '}
+          <label htmlFor='science'>science</label>
           <br />
           <input
-            name='talkingwhenyourmouthisfull'
-            type='checkbox'
-            id='talkingwhenyourmouthisfull'
-            value={talkingwhenyourmouthisfull}
-            onChange={(e) => setTalkingwhenyourmouthisfull(e.target.value)}
-            required
+            type='radio'
+            id='IT'
+            name='field'
+            value={IT}
+            onChange={(e) => setIt(e.target.value)}
           />{' '}
-          <label htmlFor='talkingwhenyourmouthisfull'>
-            talking_when your mouth is full:
-          </label>{' '}
+          <label htmlFor='IT'>IT</label>
           <br />
           <input
-            name='leavingthewaterrunning'
-            type='checkbox'
-            id='leavingthewaterrunning'
-            value={leavingthewaterrunning}
-            onChange={(e) => setLeavingthewaterrunning(e.target.value)}
-            required
+            type='radio'
+            id='commercial'
+            name='field'
+            value={commercial}
+            onChange={(e) => setCommercial(e.target.value)}
           />{' '}
-          <label htmlFor='leavingthewaterrunning'>
-            leaving the water running:
-          </label>{' '}
+          <label htmlFor='commercial'>commercial</label>
           <br />
           <input
-            name='smoking'
-            type='checkbox'
+            type='radio'
+            id='arts'
+            name='field'
+            value={arts}
+            onChange={(e) => setArts(e.target.value)}
+          />{' '}
+          <label htmlFor='arts'>arts</label>
+          <br />
+        </div>
+        <div>
+          <input
+            type='radio'
+            id='css1'
+            name='gender1'
+            value={female1}
+            onChange={(e) => setFemale1(e.target.value)}
+          />{' '}
+          <label htmlFor='css1'>Female</label>
+          <br />
+          <input
+            type='radio'
+            id='html1'
+            name='gender1'
+            value={male1}
+            onChange={(e) => setMale1(e.target.value)}
+          />{' '}
+          <label htmlFor='html1'>Male</label>
+          <br />
+        </div>
+        <div>
+          <small>select your dislikes</small>
+          <input
+            type='radio'
             id='smoking'
+            name='dislike'
             value={smoking}
             onChange={(e) => setSmoking(e.target.value)}
-            required
           />{' '}
-          <label htmlFor='smoking'>smoking:</label> <br />
-          <input
-            name='leavingdirtydishesinthesink'
-            type='checkbox'
-            id='leavingdirtydishesinthesink'
-            value={leavingdirtydishesinthesink}
-            onChange={(e) => setLeavingdirtydishesinthesink(e.target.value)}
-            required
-          />{' '}
-          <label htmlFor='leavingdirtydishesinthesink'>
-            leaving dirty dishes in the sink:
-          </label>{' '}
+          <label htmlFor='smoking'>smoking</label>
           <br />
           <input
-            name='sneezingwithoutcoveringyourmouth'
-            type='checkbox'
-            id='sneezingwithoutcoveringyourmouth'
-            value={sneezingwithoutcoveringyourmouth}
-            onChange={(e) =>
-              setSneezingwithoutcoveringyourmouth(e.target.value)
-            }
-            required
+            type='radio'
+            id='alcoholintake'
+            name='dislike'
+            value={alcoholintake}
+            onChange={(e) => setAlcoholintake(e.target.value)}
           />{' '}
-          <label htmlFor='sneezingwithoutcoveringyourmouth'>
-            sneezing without covering your mouth:
-          </label>{' '}
+          <label htmlFor='alcoholintake'>alcoholintake</label>
           <br />
           <input
-            name='littering'
-            type='checkbox'
-            id='littering'
-            value={littering}
-            onChange={(e) => setLittering(e.target.value)}
-            required
+            type='radio'
+            id='uncleanliness'
+            name='dislike'
+            value={uncleanliness}
+            onChange={(e) => setUncleanliness(e.target.value)}
           />{' '}
-          <label htmlFor='littering'>littering:</label> <br />
+          <label htmlFor='uncleanliness'>uncleanliness</label>
+          <br />
           <input
-            name='bitingnails'
-            type='checkbox'
-            id='bitingnails'
-            value={bitingnails}
-            onChange={(e) => setBitingnails(e.target.value)}
-            required
+            type='radio'
+            id='lateness'
+            name='dislike'
+            value={lateness}
+            onChange={(e) => setLateness(e.target.value)}
           />{' '}
-          <label htmlFor='bitingnails'>biting nails:</label> <br />
+          <label htmlFor='lateness'>lateness</label>
+          <br />
           <input
-            name='snoring'
-            type='checkbox'
-            value={snoring}
-            id='snoring'
-            onChange={(e) => setSnoring(e.target.value)}
-            required
+            type='radio'
+            id='homepartying'
+            name='dislike'
+            value={homepartying}
+            onChange={(e) => setHomepartying(e.target.value)}
           />{' '}
-          <label htmlFor='snoring'>Snoring:</label> <br />
-          <input
-            name='leavingthetoiletseatup'
-            type='checkbox'
-            id='leavingthetoiletseatup'
-            value={leavingthetoiletseatup}
-            onChange={(e) => setLeavingthetoiletseatup(e.target.value)}
-            required
-          />{' '}
-          <label htmlFor='leavingthetoiletseatup'>
-            leaving the toilet seat up:
-          </label>{' '}
-        </div>
-        <br />
+          <label htmlFor='homepartying'>homepartying</label>
+          <br />
+        </div> */}
         <input type='submit' value='get started' />
       </form>
     </div>

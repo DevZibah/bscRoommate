@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
+  const [isAuth, setIsAuth] = useState(false)
+  // The useEffect hook is being used to check, and change the authentication status of the user. It does this by checking for a key called token in local storage. If the key exists, the user is authenticated already.
+  useEffect(() => {
+    if (localStorage.getItem('token') !== null) {
+      setIsAuth(true)
+    }
+  }, [])
+
   return (
     <div className='firstdiv'>
       <nav class='navbar navbar-expand-lg'>
@@ -28,12 +36,30 @@ const Navbar = () => {
           id='navbarNav'
         >
           <ul class='navbar-nav mt-3 cc-ul'>
-            <Link to='/SignUp' className='signup'>
-              <button>SignUp</button>
-            </Link>
-            <Link to='/Login' className='signup mt-2'>
-              <button>Login</button>
-            </Link>
+            {isAuth === true ? (
+              <Fragment>
+                {' '}
+                <li>
+                  <Link to='/Dashboard'>Dashboard</Link>
+                </li>
+                <li>
+                  <Link to='/Profee'>profee</Link>
+                </li>
+                <li>
+                  <Link to='/Logout'>Logout</Link>
+                </li>
+              </Fragment>
+            ) : (
+              <Fragment>
+                {' '}
+                <Link to='/SignUp' className='signup'>
+                  <button>SignUp</button>
+                </Link>
+                <Link to='/Login' className='signup mt-2'>
+                  <button>Login</button>
+                </Link>
+              </Fragment>
+            )}
           </ul>
         </div>
       </nav>
