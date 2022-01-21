@@ -1,16 +1,48 @@
 import React, { useState, useEffect, Fragment, useContext } from 'react'
-import { Link } from 'react-router-dom/cjs/react-router-dom.min'
+import { Link } from 'react-router-dom'
+import List from '../components/List'
+import Modal from './Modal'
+import User from './User'
 
 const Dashboard = () => {
   const [username, setUserName] = useState('')
   const [loading, setLoading] = useState(true)
   const [state, setState] = useState([])
   const [loading1, setLoading1] = useState(true)
+  const [search, setSearch] = useState('')
+
   console.log(state)
   const itemauthor = state.filter((item) => {
     return item.alias === username
   })
   console.log(itemauthor)
+
+  useEffect(() => {
+    if (localStorage.getItem('token') == null) {
+      window.location.replace('http://localhost:3000/login')
+    } else {
+      setLoading(false)
+    }
+  }, [])
+
+  const handleLogout = (e) => {
+    e.preventDefault()
+
+    fetch('http://127.0.0.1:8000/api/v1/rest-auth/logout/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Token ${localStorage.getItem('token')}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data)
+        localStorage.clear()
+        window.location.replace('http://localhost:3000')
+      })
+  }
+
   useEffect(() => {
     //  checks to see if a user is authenticated in line 9
     if (localStorage.getItem('token') === null) {
@@ -52,18 +84,67 @@ const Dashboard = () => {
     }
   }, [])
   return (
-    <div className='text-dark'>
-      {loading === false && (
+    <div className='text-dark p-4'>
+      <div className='dashroomie'>
+        <div>
+          <h4 className='logo'>HiRoomie</h4>
+        </div>
+        <div className='logout'>
+          <input type='button' value='Logout' onClick={handleLogout} />
+        </div>
+      </div>
+      {loading1 === false && (
         <Fragment>
-          <h1>Dashboard</h1>
-          {itemauthor.map((item) => (
-            <div>
-              <h2>hello {item.alias}!</h2>
+          {itemauthor.map((item, key) => (
+            <div key={key}>
+              <p className='user mt-5'>Hi {item.alias}!</p>
             </div>
           ))}
         </Fragment>
       )}
-      <Link to='/Logout'>Logout</Link>
+      <div className='heading'>
+        <h4>Find a suitable roommate to share an apartment with.</h4>
+      </div>
+      <div className='mt-4 search'>
+        <input
+          type='text'
+          id='search'
+          placeholder='Search Usernames....'
+          onChange={(event) => {
+            setSearch(event.target.value)
+          }}
+        />
+        {state
+          .filter((item) => {
+            if (search == '') {
+              return null
+            } else if (
+              item.alias.toLowerCase().includes(search.toLowerCase())
+            ) {
+              return item
+            }
+          })
+          .map((item, key) => {
+            return (
+              <div key={key}>
+                <div className='list'>
+                  <List key={key} item={item} itemauthor={itemauthor} />
+                </div>
+                {/* <Modal item={item} /> */}
+              </div>
+            )
+          })}
+      </div>
+      <div className='recommend mt-4'>
+        <div>
+          <small>Recommendations</small>
+        </div>
+        <div className='profile'>
+          <Link to='/User'>
+            <small>List</small>
+          </Link>
+        </div>
+      </div>
     </div>
   )
 }

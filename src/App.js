@@ -6,6 +6,9 @@ import Login from './components/Login'
 import Dashboard from './components/Dashboard'
 import Usersprofile from './components/Usersprofile'
 import Logout from './components/Logout'
+import User from './components/User'
+import Profile from './components/Profile'
+import Modal from './components/Modal'
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
         <Route exact path='/Logout' component={Logout} />
         <Route exact path='/Dashboard' component={Dashboard} />
         <Route exact path='/Usersprofile' component={Usersprofile} />
+        <Route exact path='/User' component={User} />
+        <Route exact path='/Profile' component={Profile} />
+        <Route exact path='/Modal' component={Modal} />
       </Switch>
     </div>
   )
