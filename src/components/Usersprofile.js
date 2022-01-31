@@ -343,6 +343,18 @@ const Usersprofile = () => {
           </small>
         </div>
         <br />
+        {/* <div className='usernamee p-4'>
+          <label htmlFor='image'>Upload your image here*</label>{' '}
+          <input
+            name='image'
+            type='file'
+            accept='.png, .jpg, .jpeg'
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
+            required
+          />{' '}
+        </div> */}
+        <br />
         <div className='buttoon'>
           <input type='submit' value='Get Started' />
         </div>

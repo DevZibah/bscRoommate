@@ -3,9 +3,7 @@ import React, { useState, useEffect } from 'react'
 const Profile = (props) => {
   const [state, setState] = useState([])
   const [loading1, setLoading1] = useState(true)
-  // const author = state.filter((item) => {
-  //   return item.alias === props.state.alias
-  // })
+  
   useEffect(() => {
     //  checks to see if a user is authenticated in line 9
     if (localStorage.getItem('token') === null) {

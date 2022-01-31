@@ -1,8 +1,7 @@
 import React, { useState, useEffect, Fragment, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import List from '../components/List'
-import Modal from './Modal'
-import User from './User'
+import Recommendations from './Recommendations'
 
 const Dashboard = () => {
   const [username, setUserName] = useState('')
@@ -11,12 +10,10 @@ const Dashboard = () => {
   const [loading1, setLoading1] = useState(true)
   const [search, setSearch] = useState('')
 
-  console.log(state)
+  // console.log(state)
   const itemauthor = state.filter((item) => {
     return item.alias === username
   })
-  console.log(itemauthor)
-
   useEffect(() => {
     if (localStorage.getItem('token') == null) {
       window.location.replace('http://localhost:3000/login')
@@ -58,7 +55,7 @@ const Dashboard = () => {
         .then((res) => res.json())
         .then((data) => {
           setState(data)
-          console.log(data)
+          // console.log(data)
           setLoading1(false)
         })
     }
@@ -79,7 +76,7 @@ const Dashboard = () => {
         .then((data) => {
           setUserName(data.username)
           setLoading(false)
-          console.log(data)
+          // console.log(data)
         })
     }
   }, [])
@@ -130,7 +127,6 @@ const Dashboard = () => {
                 <div className='list'>
                   <List key={key} item={item} itemauthor={itemauthor} />
                 </div>
-                {/* <Modal item={item} /> */}
               </div>
             )
           })}
@@ -141,9 +137,12 @@ const Dashboard = () => {
         </div>
         <div className='profile'>
           <Link to='/User'>
-            <small>List</small>
+            <small>Users</small>
           </Link>
         </div>
+      </div>
+      <div>
+        <Recommendations itemauthor={itemauthor} />
       </div>
     </div>
   )

@@ -1,7 +1,5 @@
 import React, { useState, useEffect, Fragment } from 'react'
-import { Link } from 'react-router-dom'
 import Modal from './Modal'
-import Profile from './Profile'
 
 const List = ({ item, itemauthor }) => {
   const [state, setState] = useState([item])
@@ -30,9 +28,15 @@ const List = ({ item, itemauthor }) => {
                     <span>State:</span> {item.state} <span>Area:</span>{' '}
                     {item.area}
                   </p>
-                  <div>
-                    <button onClick={() => setShow(true)}>View details</button>
-                    <Modal item={item} show={show} onClose={() => setShow(false)}/>
+                  <div className='modal-div'>
+                    <button onClick={() => setShow(true)}>
+                      <small>View details</small>
+                    </button>
+                    <Modal
+                      item={item}
+                      show={show}
+                      onClose={() => setShow(false)}
+                    />
                   </div>
                 </div>
               </div>
