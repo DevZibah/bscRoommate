@@ -306,42 +306,42 @@ body {
     border-radius: 5%;
     width: 100%;
   }
-  .profileform{
+  .profileform {
     border: 1px solid white;
     background-color: rgb(230, 230, 230);
   }
-  .username{
+  .username {
     border: 1px solid white;
     border-radius: 12px;
     background-color: white;
     text-align: start;
   }
-  .forrm{
+  .forrm {
     border: 1px solid rgb(230, 230, 230);
     font-family: 'Courier New', Courier, monospace;
   }
-  .hint{
+  .hint {
     color: red;
   }
-  .hints{
-    font-family:monospace;
+  .hints {
+    font-family: monospace;
   }
-  .buttoon input{
+  .buttoon input {
     border: 1px solid rgb(108, 99, 255);
     padding: 10px;
     border-radius: 12px;
     background-color: rgb(108, 99, 255);
   }
-  .dashroomie{
+  .dashroomie {
     border: 1px solid white;
     text-align: start;
   }
-  .logout{
+  .logout {
     border: 1px solid white;
     text-align: end;
     margin-top: -2.5rem;
   }
-  .logout input{
+  .logout input {
     border: 1px solid whitesmoke;
     padding: 2px;
     border-radius: 12px;
@@ -351,50 +351,50 @@ body {
     font-family: fantasy;
     box-shadow: 5px 10px rgb(108, 99, 255);
   }
-  .user{
+  .user {
     border: 1px solid white;
     text-align: start;
     font-weight: bolder;
     color: black;
   }
-  .heading{
+  .heading {
     border: 1px solid white;
     text-align: start;
     color: black;
   }
-  .search input{
+  .search input {
     width: 325px;
     height: 40px;
     padding: 7px;
   }
-  .location{
+  .location {
     border: 2px solid whitesmoke;
     box-shadow: 10px 10px whitesmoke;
     text-align: start;
   }
-  .location span{
+  .location span {
     font-weight: bold;
     color: black;
   }
-  .location p{
+  .location p {
     color: black;
   }
-  .recommend{
+  .recommend {
     text-align: start;
   }
-  .profile{
+  .profile {
     border: 1px solid white;
     text-align: end;
     margin-top: -1.7rem;
   }
-  .recommend small{
+  .recommend small {
     color: black;
     font-weight: bolder;
   }
-  .none{
+  .none {
     display: none;
   }
-  .modal{
+  .modal {
     position: fixed;
     left: 0;
     top: 0;
@@ -405,68 +405,579 @@ body {
     align-items: center;
     justify-content: center;
   }
-  .modal-content{
+  .modal-content {
     width: 500px;
     background-color: #fff;
   }
-  .modal-header, .modal-footer{
+  .modal-header,
+  .modal-footer {
     padding: 10px;
   }
-  .modal-title{
+  .modal-title {
     margin: 0;
   }
-  .modal-body{
+  .modal-body {
     border: 1px solid rgb(108, 99, 255);
     background-color: rgb(108, 99, 255);
-    opacity: .7;
+    opacity: 0.7;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
   }
-  .usernamee{
+  .usernamee {
     border: 1px solid white;
     border-radius: 12px;
     background-color: white;
     text-align: start;
     width: 100%;
   }
-  .usernamee input{
+  .usernamee input {
     border: 1px solid white;
     width: 100%;
   }
-  .modal-div button{
-    border: 1px solid whitesmoke;
+  .modal-div button {
+    border: 1px solid rgb(108, 99, 255);
     padding: 2px;
     border-radius: 12px;
     background-color: white;
     color: gray;
     width: 10rem;
     font-family: fantasy;
-    box-shadow: 5px 10px white;
+    box-shadow: 5px 5px rgb(108, 99, 255);
   }
-  .flex{
+  .flex {
     border: 1px solid white;
     display: flex;
     color: black;
   }
-  .flex1{
+  .flex1 {
     display: flex;
     justify-content: space-between;
   }
-  .arrow{
+  .arrow {
     border: 1px solid white;
     text-align: start;
   }
-  .arrow h5{
+  .arrow h5 {
     border: 1px solid white;
     text-align: center;
     margin-top: -1.5rem;
     font-family: fantasy;
   }
-  .falong{
+  .falong {
     color: rgb(108, 99, 255);
   }
-  .loca{
-    border: 1px solid red;
+  .loca {
+    border: 3px solid whitesmoke;
+    padding: 2rem !important;
+    /* width: 500px; */
+    margin: auto;
+    margin-top: 1.5rem !important;
     text-align: start;
+    padding: 1rem;
+    box-shadow: 2px 2px rgb(108, 99, 255);
+  }
+  .rec {
+    border: 3px solid whitesmoke;
+    margin-top: 1rem;
+    text-align: start;
+    padding: 1rem;
+    box-shadow: 2px 2px rgb(108, 99, 255);
+  }
+}
+@media (min-width: 768px) {
+  body {
+    border: 1px solid blue;
+    font-size: 18px;
+    color: black;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .firstdiv {
+    border: 1px solid whitesmoke;
+    padding: 2rem;
+    position: fixed;
+    width: 100%;
+    background-color: whitesmoke;
+  }
+  .logo {
+    color: rgb(108, 99, 255);
+    font-family: fantasy;
+  }
+  .signup {
+    padding: 0.3rem;
+  }
+  .cc-ul {
+    border: 1px solid whitesmoke;
+    margin-top: 0.5rem !important;
+  }
+  .signup button {
+    border: 2px solid rgb(108, 99, 255);
+    padding: 0.5rem;
+    width: 8rem;
+    border-radius: 2rem;
+    background-color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+  .signup button:hover {
+    background-color: rgb(108, 99, 255);
+    color: white;
+  }
+  .login button {
+    margin-top: -5rem;
+  }
+  .cll {
+    border: 1px solid whitesmoke;
+    padding: 3rem;
+    transform: translateY(9rem);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+  .image-one img {
+    border: 1px solid whitesmoke;
+    padding: -2rem;
+    width: 100%;
+  }
+  .firstart {
+    border: 1px solid whitesmoke;
+    padding: 1rem;
+    text-align: start;
+  }
+  .firstart button {
+    border: 1px solid rgb(108, 99, 255);
+    background-color: rgb(108, 99, 255);
+    padding: 0.5rem;
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    color: white;
+  }
+  .rome {
+    border: 1px solid whitesmoke;
+    margin-top: 10rem;
+    font-size: 2rem;
+  }
+  .gridd {
+    border: 1px solid whitesmoke;
+    background-color: whitesmoke;
+    padding: 2.5rem;
+    margin-top: -9rem;
+    transform: translateY(9rem);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    text-align: start;
+  }
+  .gridd img {
+    border: 1px solid whitesmoke;
+    transform: translateX(26rem);
+    padding: -2rem;
+    width: 100%;
+  }
+  .fitt {
+    border: 1px solid whitesmoke;
+    transform: translateX(25.8rem);
+  }
+  .griid {
+    border: 1px solid whitesmoke;
+    background-color: whitesmoke;
+    padding: 2.5rem;
+    margin-top: -5rem;
+    transform: translateY(9rem);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    text-align: start;
+  }
+  .griid img {
+    border: 1px solid whitesmoke;
+    padding: -2rem;
+    width: 100%;
+  }
+  .boon {
+    border: 1px solid whitesmoke;
+    margin-top: 5rem;
+  }
+  .ano-sec {
+    border: 1px solid white;
+    margin-top: 10rem;
+  }
+  .grdd {
+    border: 1px solid white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+  .grid-one {
+    border: 1px solid white;
+    text-align: start;
+    transform: translateX(25rem);
+  }
+  .ano-image img {
+    border: 1px solid white;
+    padding: 3rem;
+    width: 100%;
+    transform: translateX(26rem);
+  }
+  .butn button {
+    border: 1px solid rgb(108, 99, 255);
+    background-color: rgb(108, 99, 255);
+    padding: 0.5rem;
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    color: white;
+  }
+  footer {
+    border: 1px solid rgb(108, 99, 255);
+    text-align: start;
+    background-color: rgb(108, 99, 255);
+    color: whitesmoke;
+  }
+  footer h4 {
+    font-family: fantasy;
+  }
+  footer ul {
+    text-decoration: none;
+    list-style-type: none;
+  }
+  .foot-sign {
+    color: white;
+  }
+  .foot-sign:hover {
+    text-decoration: none;
+    color: white;
+  }
+  .form {
+    border: 1px solid rgb(193, 193, 221);
+    background-color: rgb(193, 193, 221);
+    padding: 2.2rem !important;
+    /* opacity: .6; */
+  }
+  .form-div {
+    height: auto;
+    margin: auto;
+    width: 50%;
+    position: relative;
+    align-items: center;
+    padding: 30px;
+    border-radius: 30px;
+    background: linear-gradient(
+      30deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.4)
+    );
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 999;
+  }
+  .form-div h2 {
+    font-size: 45px;
+    margin: 30px 0;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgb(108, 99, 255);
+  }
+  .form-div input {
+    height: 50px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.3)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 8px 0;
+    padding: 0 20px;
+    font-size: 18px;
+    border-radius: 7px;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+  }
+  .form-div input::placeholder {
+    color: #ffffff;
+  }
+  .form-div input[type='submit'] {
+    background: rgb(108, 99, 255);
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    border: none;
+    box-shadow: none;
+  }
+  .form-div p {
+    color: #fff;
+  }
+  .form-div p a {
+    color: rgb(108, 99, 255);
+  }
+  .form1 {
+    border: 1px solid rgb(193, 193, 221);
+    background-color: rgb(193, 193, 221);
+    padding: 4.8rem !important;
+    /* opacity: .6; */
+  }
+  .form-div1 {
+    margin-bottom: 1rem;
+    height: auto;
+    width: 50%;
+    margin: auto;
+    position: relative;
+    padding: 30px;
+    border-radius: 30px;
+    background: linear-gradient(
+      30deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.4)
+    );
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 999;
+  }
+  .form1 h1 {
+    font-size: 45px;
+    margin: 30px 0;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgb(108, 99, 255);
+  }
+  .form-div1 input {
+    height: 50px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.3)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 8px 0;
+    padding: 0 20px;
+    font-size: 18px;
+    border-radius: 7px;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+  }
+  .form-div1 input::placeholder {
+    color: #ffffff;
+  }
+  .form-div1 input[type='submit'] {
+    background: rgb(108, 99, 255);
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    border: none;
+    box-shadow: none;
+  }
+  .form-div1 p {
+    color: #fff;
+  }
+  .form-div1 p a {
+    color: rgb(108, 99, 255);
+  }
+  .home {
+    border: 2px solid rgb(230, 230, 230);
+    width: 100%;
+    padding: 1rem;
+  }
+  .home img {
+    border-radius: 5%;
+    width: 50%;
+  }
+  .profileform {
+    border: 1px solid rgb(230, 230, 230);
+    margin-bottom: -0.3rem !important;
+    background-color: rgb(230, 230, 230);
+  }
+  .username {
+    border: 1px solid white;
+    width: 50%;
+    margin: auto;
+    border-radius: 12px;
+    background-color: white;
+    text-align: start;
+  }
+  .forrm {
+    border: 1px solid rgb(230, 230, 230);
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .hint {
+    color: red;
+  }
+  .hints {
+    font-family: monospace;
+  }
+  .buttoon input {
+    width: 50%;
+    border: 1px solid rgb(108, 99, 255);
+    padding: 10px;
+    border-radius: 12px;
+    background-color: rgb(108, 99, 255);
+    margin-top: -3rem !important;
+  }
+  .dashroomie {
+    border: 1px solid white;
+    text-align: start;
+    padding: 2rem;
+  }
+  .logout {
+    border: 1px solid white;
+    text-align: end;
+    margin-top: -2.5rem;
+  }
+  .logout input {
+    border: 1px solid whitesmoke;
+    padding: 2px;
+    border-radius: 12px;
+    background-color: white;
+    color: gray;
+    width: 5rem;
+    font-family: fantasy;
+    box-shadow: 5px 10px rgb(108, 99, 255);
+  }
+  .user {
+    border: 1px solid white;
+    padding: 2rem;
+    text-align: start;
+    font-weight: bolder;
+    color: black;
+  }
+  .heading {
+    border: 1px solid white;
+    text-align: center;
+    color: black;
+  }
+  .heading h4 {
+    font-size: 2rem;
+  }
+  .search input {
+    width: 500px;
+    height: 40px;
+    padding: 7px;
+  }
+  .recommend {
+    border: 1px solid white;
+    text-align: start;
+    padding: 2rem;
+    margin-top: 0.5rem !important;
+  }
+  .profile {
+    border: 1px solid white;
+    text-align: end;
+    margin-top: -1.7rem;
+  }
+  .recommend small {
+    color: black;
+    font-weight: bolder;
+  }
+  .location {
+    border: 3px solid whitesmoke;
+    padding: 1.3rem !important;
+    width: 500px;
+    margin: auto;
+    box-shadow: 10px 10px whitesmoke;
+    text-align: start;
+  }
+  .location span {
+    font-weight: bold;
+    color: black;
+  }
+  .location p {
+    color: black;
+  }
+  .modal-div button {
+    border: 1px solid rgb(108, 99, 255);
+    padding: 2px;
+    border-radius: 12px;
+    background-color: white;
+    color: gray;
+    width: 10rem;
+    font-family: fantasy;
+    box-shadow: 5px 5px rgb(108, 99, 255);
+  }
+  .modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-content {
+    width: 500px;
+    background-color: #fff;
+  }
+  .modal-header,
+  .modal-footer {
+    padding: 10px;
+  }
+  .modal-title {
+    margin: 0;
+  }
+  .modal-body {
+    border: 1px solid rgb(108, 99, 255);
+    background-color: rgb(108, 99, 255);
+    opacity: 0.7;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .flex {
+    border: 1px solid white;
+    display: flex;
+    color: black;
+  }
+  .flex1 {
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex1 h6{
+    color: black;
+    font-weight: bolder;
+  }
+  .rec {
+    border: 3px solid whitesmoke;
+    width: 500px;
+    margin: auto;
+    margin-top: 1rem;
+    text-align: start;
+    padding: 1rem;
+    box-shadow: 2px 2px rgb(108, 99, 255);
+  }
+  .arrow {
+    border: 1px solid white;
+    padding: 2rem !important;
+    text-align: start;
+  }
+  .arrow h5 {
+    border: 1px solid white;
+    text-align: center;
+    margin-top: -1.5rem;
+    font-family: fantasy;
+  }
+  .falong {
+    color: rgb(108, 99, 255);
+  }
+  .loca {
+    border: 3px solid whitesmoke;
+    padding: 2rem !important;
+    width: 500px;
+    margin: auto;
+    margin-top: 1.5rem !important;
+    text-align: start;
+    padding: 1rem;
+    box-shadow: 2px 2px rgb(108, 99, 255);
   }
 }

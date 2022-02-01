@@ -52,11 +52,6 @@ const User = (props) => {
         })
     }
   }, [])
-
-  // const handleClick = state.filter((item) =>{
-  //   setShow(true)
-  //   if(item.alias === )
-  // })
   
 
   return (

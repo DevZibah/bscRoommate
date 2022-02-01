@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useContext, Fragment } from 'react'
-import { RecommendContext } from '../contexts/RecommendContext'
+import Modall from './Modall'
 
 const Recommendations = () => {
-  // const { state, itemauthor, loading, loading1 } = useContext(RecommendContext)
   const [username, setUserName] = useState([])
   const [loading, setLoading] = useState(true)
   const [state, setState] = useState([])
   const [loading1, setLoading1] = useState(true)
+  const [show, setShow] = useState(false)
 
   const itemauthor = state.filter((item) => {
     return item.alias === username
@@ -59,52 +59,87 @@ const Recommendations = () => {
               if (item == itemauthor[0]) {
                 return null
               } else if (
-                item.state === itemauthor[0].state &&
-                item.agegroup === itemauthor[0].agegroup &&
-                item.alcohol === itemauthor[0].alcohol &&
-                item.area === itemauthor[0].area &&
-                item.discipline === itemauthor[0].discipline &&
-                item.gender1 === itemauthor[0].gender1 &&
-                item.homepartying === itemauthor[0].homepartying &&
-                item.lateness === itemauthor[0].lateness &&
-                item.religion === itemauthor[0].religion &&
-                item.smoking === itemauthor[0].smoking &&
-                item.uncleanliness === itemauthor[0].uncleanliness
+                item.state.toLowerCase() ===
+                  itemauthor[0].state.toLowerCase() &&
+                item.agegroup.toLowerCase() ===
+                  itemauthor[0].agegroup.toLowerCase() &&
+                item.alcohol.toLowerCase() ===
+                  itemauthor[0].alcohol.toLowerCase() &&
+                item.area.toLowerCase() === itemauthor[0].area.toLowerCase() &&
+                item.discipline.toLowerCase() ===
+                  itemauthor[0].discipline.toLowerCase() &&
+                item.gender1.toLowerCase() ===
+                  itemauthor[0].gender1.toLowerCase() &&
+                item.homepartying.toLowerCase() ===
+                  itemauthor[0].homepartying.toLowerCase() &&
+                item.lateness.toLowerCase() ===
+                  itemauthor[0].lateness.toLowerCase() &&
+                item.religion.toLowerCase() ===
+                  itemauthor[0].religion.toLowerCase() &&
+                item.smoking.toLowerCase() ===
+                  itemauthor[0].smoking.toLowerCase() &&
+                item.uncleanliness.toLowerCase() ===
+                  itemauthor[0].uncleanliness.toLowerCase()
               ) {
                 return item
-              }
+              } 
             })
             .map((item, key) => {
               return (
-                <div key={key}>
-                  <h5>{item.alias}</h5>
+                <div key={key} className='rec'>
+                  <h5>@{item.alias}</h5>
+                  <p>
+                    <span>Name:</span> {item.lastname} {item.firstname}
+                  </p>
+                  <p>
+                    <span>State:</span> {item.state} <span>Area:</span>{' '}
+                    {item.area}
+                  </p>
                   <h4>99%</h4>
+                  <div className='modal-div'>
+                    <button onClick={() => setShow(true)}>
+                      <small>View details</small>
+                    </button>
+                    <Modall
+                      item={item}
+                      show={show}
+                      onClose={() => setShow(false)}
+                    />
+                  </div>
                 </div>
               )
             })}
-          {state
+          {/* {state
             .filter((item2) => {
               if (item2 == itemauthor[0]) {
                 return null
               } else if (
-                item2.state === itemauthor[0].state &&
-                item2.agegroup === itemauthor[0].agegroup &&
-                item2.alcohol === itemauthor[0].alcohol &&
-                item2.area === itemauthor[0].area &&
-                item2.discipline === itemauthor[0].discipline &&
-                item2.gender1 === itemauthor[0].gender1 &&
-                item2.homepartying === itemauthor[0].homepartying &&
-                item2.lateness === itemauthor[0].lateness &&
-                item2.religion === itemauthor[0].religion &&
-                item2.smoking === itemauthor[0].smoking
+                item2.state.toLowerCase() === itemauthor[0].state.toLowerCase() &&
+                item2.agegroup.toLowerCase() === itemauthor[0].agegroup.toLowerCase() &&
+                item2.alcohol.toLowerCase() === itemauthor[0].alcohol.toLowerCase() &&
+                item2.area.toLowerCase() === itemauthor[0].area.toLowerCase() &&
+                item2.discipline.toLowerCase() === itemauthor[0].discipline.toLowerCase() &&
+                item2.gender1.toLowerCase() === itemauthor[0].gender1.toLowerCase() &&
+                item2.homepartying.toLowerCase() ===
+                  itemauthor[0].homepartying &&
+                item2.lateness.toLowerCase() === itemauthor[0].lateness.toLowerCase() &&
+                item2.religion.toLowerCase() === itemauthor[0].religion.toLowerCase() &&
+                item2.smoking.toLowerCase() === itemauthor[0].smoking.toLowerCase()
               ) {
                 return item2
               }
             })
             .map((item2, key) => {
               return (
-                <div key={key}>
-                  <h5>{item2.alias}</h5>
+                <div key={key} className='rec'>
+                  <h5>@{item2.alias}</h5>
+                  <p>
+                    <span>Name:</span> {item2.lastname} {item2.firstname}
+                  </p>
+                  <p>
+                    <span>State:</span> {item2.state} <span>Area:</span>{' '}
+                    {item2.area}
+                  </p>
                   <h4>95%</h4>
                 </div>
               )
@@ -114,23 +149,30 @@ const Recommendations = () => {
               if (item3 == itemauthor[0]) {
                 return null
               } else if (
-                item3.state === itemauthor[0].state &&
-                item3.agegroup === itemauthor[0].agegroup &&
-                item3.alcohol === itemauthor[0].alcohol &&
-                item3.area === itemauthor[0].area &&
-                item3.discipline === itemauthor[0].discipline &&
-                item3.gender1 === itemauthor[0].gender1 &&
-                item3.homepartying === itemauthor[0].homepartying &&
-                item3.lateness === itemauthor[0].lateness &&
-                item3.religion === itemauthor[0].religion
+                item3.state.toLowerCase() === itemauthor[0].state.toLowerCase() &&
+                item3.agegroup.toLowerCase() === itemauthor[0].agegroup.toLowerCase() &&
+                item3.alcohol.toLowerCase() === itemauthor[0].alcohol.toLowerCase() &&
+                item3.area.toLowerCase() === itemauthor[0].area.toLowerCase() &&
+                item3.discipline.toLowerCase() === itemauthor[0].discipline.toLowerCase() &&
+                item3.gender1.toLowerCase() === itemauthor[0].gender1.toLowerCase() &&
+                item3.homepartying.toLowerCase() === itemauthor[0].homepartying.toLowerCase() &&
+                item3.lateness.toLowerCase() === itemauthor[0].lateness.toLowerCase() &&
+                item3.religion.toLowerCase() === itemauthor[0].religion.toLowerCase()
               ) {
                 return item3
               }
             })
             .map((item3, key) => {
               return (
-                <div key={key}>
-                  <h5>{item3.alias}</h5>
+                <div key={key} className='rec'>
+                  <h5>@{item3.alias}</h5>
+                  <p>
+                    <span>Name:</span> {item3.lastname} {item3.firstname}
+                  </p>
+                  <p>
+                    <span>State:</span> {item3.state} <span>Area:</span>{' '}
+                    {item3.area}
+                  </p>
                   <h4>90%</h4>
                 </div>
               )
@@ -154,8 +196,15 @@ const Recommendations = () => {
             })
             .map((item4, key) => {
               return (
-                <div key={key}>
-                  <h5>{item4.alias}</h5>
+                <div key={key} className='rec'>
+                  <h5>@{item4.alias}</h5>
+                  <p>
+                    <span>Name:</span> {item4.lastname} {item4.firstname}
+                  </p>
+                  <p>
+                    <span>State:</span> {item4.state} <span>Area:</span>{' '}
+                    {item4.area}
+                  </p>
                   <h4>85%</h4>
                 </div>
               )
@@ -178,8 +227,15 @@ const Recommendations = () => {
             })
             .map((item5, key) => {
               return (
-                <div key={key}>
-                  <h5>{item5.alias}</h5>
+                <div key={key} className='rec'>
+                  <h5>@{item5.alias}</h5>
+                  <p>
+                    <span>Name:</span> {item5.lastname} {item5.firstname}
+                  </p>
+                  <p>
+                    <span>State:</span> {item5.state} <span>Area:</span>{' '}
+                    {item5.area}
+                  </p>
                   <h4>80%</h4>
                 </div>
               )
@@ -201,8 +257,15 @@ const Recommendations = () => {
             })
             .map((item6, key) => {
               return (
-                <div key={key}>
-                  <h5>{item6.alias}</h5>
+                <div key={key} className='rec'>
+                  <h5>@{item6.alias}</h5>
+                  <p>
+                    <span>Name:</span> {item6.lastname} {item6.firstname}
+                  </p>
+                  <p>
+                    <span>State:</span> {item6.state} <span>Area:</span>{' '}
+                    {item6.area}
+                  </p>
                   <h4>75%</h4>
                 </div>
               )
@@ -223,8 +286,15 @@ const Recommendations = () => {
             })
             .map((item7, key) => {
               return (
-                <div key={key}>
-                  <h5>{item7.alias}</h5>
+                <div key={key} className='rec'>
+                  <h5>@{item7.alias}</h5>
+                  <p>
+                    <span>Name:</span> {item7.lastname} {item7.firstname}
+                  </p>
+                  <p>
+                    <span>State:</span> {item7.state} <span>Area:</span>{' '}
+                    {item7.area}
+                  </p>
                   <h4>70%</h4>
                 </div>
               )
@@ -244,8 +314,15 @@ const Recommendations = () => {
             })
             .map((item8, key) => {
               return (
-                <div key={key}>
-                  <h5>{item8.alias}</h5>
+                <div key={key} className='rec'>
+                  <h5>@{item8.alias}</h5>
+                  <p>
+                    <span>Name:</span> {item8.lastname} {item8.firstname}
+                  </p>
+                  <p>
+                    <span>State:</span> {item8.state} <span>Area:</span>{' '}
+                    {item8.area}
+                  </p>
                   <h4>65%</h4>
                 </div>
               )
@@ -272,12 +349,19 @@ const Recommendations = () => {
             })
             .map((item9, key) => {
               return (
-                <div key={key}>
-                  <h5>{item9.alias}</h5>
+                <div key={key} className='rec'>
+                  <h5>@{item9.alias}</h5>
+                  <p>
+                    <span>Name:</span> {item9.lastname} {item9.firstname}
+                  </p>
+                  <p>
+                    <span>State:</span> {item9.state} <span>Area:</span>{' '}
+                    {item9.area}
+                  </p>
                   <h4>50%</h4>
                 </div>
               )
-            })}
+            })} */}
         </Fragment>
       )}
     </div>
