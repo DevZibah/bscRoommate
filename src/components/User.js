@@ -2,7 +2,7 @@ import React, { useState, useEffect, Fragment } from 'react'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 import { FaLongArrowAltLeft } from 'react-icons/fa'
 import Modall from './Modall'
-
+import Modalll from './Modalll'
 
 const User = (props) => {
   const [state, setState] = useState([])
@@ -10,6 +10,7 @@ const User = (props) => {
   const [loading, setLoading] = useState(true)
   const [username, setUserName] = useState('')
   const [show, setShow] = useState(false)
+  const [click, setClick] = useState()
 
   const itemauthor = state.filter((item) => {
     return item.alias === username
@@ -52,7 +53,6 @@ const User = (props) => {
         })
     }
   }, [])
-  
 
   return (
     <div className='usee p-3'>
@@ -62,43 +62,47 @@ const User = (props) => {
         </Link>
         <h5>Users</h5>
       </div>
-      <Fragment>
-        {state
-          .filter((item) => {
-            if (item == itemauthor[0]) {
-              return null
-            } else {
-              return item
-            }
-          })
-          .map((item, key) => {
-            return (
-              <div key={key}>
-                <div key={key} className='loca mt-3 p-2'>
-                  <p>{item.alias}</p>
-                  <p>
-                    <span>Name:</span> {item.lastname} {item.firstname}
-                  </p>
-                  <p>
-                    <span>State:</span> {item.state} <span>Area:</span>{' '}
-                    {item.area}
-                  </p>
-                  <div className='modal-div'>
-                    <button onClick={() => setShow(true)}>
-                      <small>View details</small>
-                    </button>
-                    <Modall
-                      alias={item.alias}
-                      item={item}
-                      show={show}
-                      onClose={() => setShow(false)}
-                    />
+      {loading1 === false && (
+        <Fragment>
+          {state
+            .filter((item) => {
+              if (item == itemauthor[0]) {
+                return null
+              } else {
+                return item
+              }
+            })
+            .map((item, key) => {
+              return (
+                <div key={key}>
+                  <div key={key} className='loca mt-3 p-2'>
+                    <p>
+                      <a>{item.alias}</a>
+                    </p>
+                    <p>
+                      <span>Name:</span> {item.lastname} {item.firstname}
+                    </p>
+                    <p>
+                      <span>State:</span> {item.state} <span>Area:</span>{' '}
+                      {item.area}
+                    </p>
+                    <div className='modal-div'>
+                      <button onClick={() => (setShow(true), setClick(item))}>
+                        <small>View details</small>
+                      </button>
+                      <Modalll
+                        item={item}
+                        show={show}
+                        click={click}
+                        onClose={() => setShow(false)}
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-            )
-          })}
-      </Fragment>
+              )
+            })}
+        </Fragment>
+      )}
     </div>
   )
 }

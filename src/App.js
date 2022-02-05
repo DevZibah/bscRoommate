@@ -11,6 +11,7 @@ import Profile from './components/Profile'
 import Modal from './components/Modal'
 import Modall from './components/Modall'
 import Recommendations from './components/Recommendations'
+import Modalll from './components/Modalll'
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route exact path='/Profile' component={Profile} />
         <Route exact path='/Modal' component={Modal} />
         <Route exact path='/Modall' component={Modall} />
+        <Route exact path='/Modalll' component={Modalll} />
         <Route exact path='/Recommendations' component={Recommendations} />
       </Switch>
     </div>

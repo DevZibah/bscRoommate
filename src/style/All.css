@@ -152,6 +152,13 @@ body {
     text-decoration: none;
     list-style-type: none;
   }
+  .foot-sign {
+    color: white;
+  }
+  .foot-sign:hover {
+    text-decoration: none;
+    color: white;
+  }
   .cc-ul {
     border: 1px solid white;
     /* text-align: start; */

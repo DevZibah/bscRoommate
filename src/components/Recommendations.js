@@ -7,11 +7,11 @@ const Recommendations = () => {
   const [state, setState] = useState([])
   const [loading1, setLoading1] = useState(true)
   const [show, setShow] = useState(false)
+  const [click, setClick] = useState()
 
   const itemauthor = state.filter((item) => {
     return item.alias === username
   })
-
   useEffect(() => {
     if (localStorage.getItem('token') === null) {
       window.location.replace('http://localhost:3000/login')
@@ -97,10 +97,11 @@ const Recommendations = () => {
                   </p>
                   <h4>99%</h4>
                   <div className='modal-div'>
-                    <button onClick={() => setShow(true)}>
+                    <button onClick={() => (setShow(true), setClick(item))}>
                       <small>View details</small>
                     </button>
                     <Modall
+                    click={click}
                       item={item}
                       show={show}
                       onClose={() => setShow(false)}

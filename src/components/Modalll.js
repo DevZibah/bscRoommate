@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import User from './User'
 
-const Modall = (props) => {
+const Modalll = (props) => {
   const [state, setState] = useState(props.item)
+  //   console.log(props.item);
+  //   console.log(props.click);
   if (!props.show) {
     return null
   }
@@ -93,4 +94,4 @@ const Modall = (props) => {
   )
 }
 
-export default Modall
+export default Modalll
