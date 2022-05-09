@@ -8,7 +8,13 @@ const Modal = (props) => {
   }
   return (
     <div className='modal p-3' onClick={props.onClose}>
-      <div className='modal-content p-3'>
+      <div
+        className='modal-content p-3'
+        data-aos='zoom-in'
+        data-aos-offset='200'
+        data-aos-easing='ease-in-sine'
+        data-aos-duration='600'
+      >
         <div className='modal-title'>
           <div>
             <h4 className='logo'>HiRoomie</h4>

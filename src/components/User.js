@@ -74,7 +74,13 @@ const User = (props) => {
             })
             .map((item, key) => {
               return (
-                <div key={key}>
+                <div
+                  key={key}
+                  // data-aos='fade-up'
+                  // data-aos-offset='200'
+                  // data-aos-easing='ease-in-sine'
+                  // data-aos-duration='600'
+                >
                   <div key={key} className='loca mt-3 p-2'>
                     <p>
                       <a>{item.alias}</a>

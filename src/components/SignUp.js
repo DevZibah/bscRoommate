@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-
 const Signup = () => {
   const [email, setEmail] = useState('')
   const [username, setUsername] = useState('')
@@ -50,7 +49,13 @@ const Signup = () => {
       {/* <Navbar /> */}
       {loading === false && <h1>Signup</h1>}
       {errors === true && <h2>Cannot signup with provided credentials</h2>}
-      <div className='form-div'>
+      <div
+        className='form-div'
+        data-aos='zoom-in'
+        data-aos-offset='200'
+        data-aos-easing='ease-in-sine'
+        data-aos-duration='600'
+      >
         <form onSubmit={onSubmit} className='text-dark'>
           <h2>Sign Up</h2>
           <input

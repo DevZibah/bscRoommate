@@ -1,7 +1,13 @@
 import React, { useState, useEffect, useContext, Fragment } from 'react'
 import Modall from './Modall'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Recommendations = () => {
+  useEffect(() => {
+    Aos.init()
+  }, [])
+
   const [username, setUserName] = useState([])
   const [loading, setLoading] = useState(true)
   const [state, setState] = useState([])
@@ -45,6 +51,7 @@ const Recommendations = () => {
         .then((res) => res.json())
         .then((data) => {
           setState(data)
+          console.log(state)
           setLoading1(false)
         })
     }
@@ -82,7 +89,7 @@ const Recommendations = () => {
                   itemauthor[0].uncleanliness.toLowerCase()
               ) {
                 return item
-              } 
+              }
             })
             .map((item, key) => {
               return (
@@ -101,7 +108,7 @@ const Recommendations = () => {
                       <small>View details</small>
                     </button>
                     <Modall
-                    click={click}
+                      click={click}
                       item={item}
                       show={show}
                       onClose={() => setShow(false)}

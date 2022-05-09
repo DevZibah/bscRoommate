@@ -56,7 +56,13 @@ const Login = () => {
     <div className='form1 p-4'>
       {errors === true && <h2>Cannot log in with provided credentials</h2>}
       {loading === false && (
-        <div className='form-div1 mt-4'>
+        <div
+          className='form-div1 mt-4'
+          data-aos='zoom-in'
+          data-aos-offset='200'
+          data-aos-easing='ease-in-sine'
+          data-aos-duration='600'
+        >
           <form onSubmit={onSubmit} className='text-dark'>
             {loading === false && <h1>Login</h1>}
             <input

@@ -2,8 +2,14 @@ import React, { useState, useEffect, Fragment, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import List from '../components/List'
 import Recommendations from './Recommendations'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Dashboard = () => {
+  useEffect(() => {
+    Aos.init()
+  }, [])
+
   const [username, setUserName] = useState('')
   const [loading, setLoading] = useState(true)
   const [state, setState] = useState([])
@@ -82,7 +88,13 @@ const Dashboard = () => {
   }, [])
   return (
     <div className='text-dark p-4 dassd'>
-      <div className='dashroomie'>
+      <div
+        className='dashroomie'
+        data-aos='fade-up'
+        data-aos-offset='200'
+        data-aos-easing='ease-in-sine'
+        data-aos-duration='600'
+      >
         <div>
           <h4 className='logo'>HiRoomie</h4>
         </div>

@@ -25,6 +25,12 @@ body {
     margin: 0 auto;
     text-align: center;
   }
+  .loaderr {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 13rem;
+  }
   .firstdiv {
     border: 1px solid white;
     padding: 1rem;
@@ -174,7 +180,7 @@ body {
   .form {
     border: 1px solid rgb(193, 193, 221);
     background-color: rgb(193, 193, 221);
-    margin-bottom: -1.7rem;
+    /* margin-bottom: -3px; */
     /* opacity: .6; */
   }
   .form-div {
@@ -501,10 +507,17 @@ body {
     margin: 0 auto;
     text-align: center;
   }
+  .loaderr {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 13rem;
+  }
   .firstdiv {
     border: 1px solid whitesmoke;
     padding: 2rem;
-    position: fixed;
+    /* position: fixed; */
+    /* z-index: 1; */
     width: 100%;
     background-color: whitesmoke;
   }
@@ -536,7 +549,7 @@ body {
     margin-top: -5rem;
   }
   .cll {
-    border: 1px solid whitesmoke;
+    border: 1px solid white;
     padding: 3rem;
     transform: translateY(9rem);
     display: grid;
@@ -544,12 +557,12 @@ body {
     grid-gap: 10px;
   }
   .image-one img {
-    border: 1px solid whitesmoke;
+    border: 1px solid white;
     padding: -2rem;
     width: 100%;
   }
   .firstart {
-    border: 1px solid whitesmoke;
+    border: 1px solid white;
     padding: 1rem;
     text-align: start;
   }
@@ -562,7 +575,7 @@ body {
     color: white;
   }
   .rome {
-    border: 1px solid whitesmoke;
+    border: 1px solid white;
     margin-top: 10rem;
     font-size: 2rem;
   }
@@ -950,7 +963,7 @@ body {
     display: flex;
     justify-content: space-between;
   }
-  .flex1 h6{
+  .flex1 h6 {
     color: black;
     font-weight: bolder;
   }

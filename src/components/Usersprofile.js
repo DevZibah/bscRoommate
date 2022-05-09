@@ -1,7 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import home from '../assets/home.jpg'
-
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 const Usersprofile = () => {
+  useEffect(() => {
+    Aos.init()
+  }, [])
+
   const [alias, setAlias] = useState('')
   const [firstname, setFirstname] = useState('')
   const [lastname, setLastname] = useState('')
@@ -83,11 +88,23 @@ const Usersprofile = () => {
   }
   return (
     <div className='profileform mb-n5'>
-      <div className='home'>
+      <div
+        className='home'
+        data-aos='zoom-in'
+        data-aos-offset='200'
+        data-aos-easing='ease-in-sine'
+        data-aos-duration='600'
+      >
         <img src={home} alt='home' />
       </div>
       <form onSubmit={onSubmit} className='forrm p-3'>
-        <div className='username p-4'>
+        <div
+          className='username p-4'
+          data-aos='fade-up'
+          data-aos-offset='200'
+          data-aos-easing='ease-in-sine'
+          data-aos-duration='600'
+        >
           <label htmlFor='alias'>Username*</label> <br />
           <input
             name='alias'
@@ -99,7 +116,13 @@ const Usersprofile = () => {
           />{' '}
         </div>
         <br />
-        <div className='username p-4'>
+        <div
+          className='username p-4'
+          data-aos='fade-up'
+          data-aos-offset='200'
+          data-aos-easing='ease-in-sine'
+          data-aos-duration='400'
+        >
           <label htmlFor='firstname'>First Name*</label> <br />
           <input
             name='firstname'
@@ -110,7 +133,13 @@ const Usersprofile = () => {
           />{' '}
         </div>
         <br />
-        <div className='username p-4'>
+        <div
+          className='username p-4'
+          data-aos='fade-up'
+          data-aos-offset='200'
+          data-aos-easing='ease-in-sine'
+          data-aos-duration='500'
+        >
           <label htmlFor='lastname'>Last Name*</label> <br />
           <input
             name='lastname'
@@ -121,7 +150,13 @@ const Usersprofile = () => {
           />{' '}
         </div>
         <br />
-        <div className='username p-4'>
+        <div
+          className='username p-4'
+          data-aos='fade-up'
+          data-aos-offset='200'
+          data-aos-easing='ease-in-sine'
+          data-aos-duration='400'
+        >
           <label htmlFor='age'>Age*</label> <br />
           <input
             name='age'
@@ -132,7 +167,13 @@ const Usersprofile = () => {
           />{' '}
         </div>
         <br />
-        <div className='username p-4'>
+        <div
+          className='username p-4'
+          data-aos='fade-up'
+          data-aos-offset='200'
+          data-aos-easing='ease-in-sine'
+          data-aos-duration='400'
+        >
           <label htmlFor='state'>State*</label> <br />
           <input
             name='state'
@@ -143,7 +184,13 @@ const Usersprofile = () => {
           />{' '}
         </div>
         <br />
-        <div className='username p-4'>
+        <div
+          className='username p-4'
+          data-aos='fade-up'
+          data-aos-offset='200'
+          data-aos-easing='ease-in-sine'
+          data-aos-duration='600'
+        >
           <label htmlFor='area'>Area*</label> <br />
           <input
             name='area'
@@ -154,7 +201,13 @@ const Usersprofile = () => {
           />{' '}
         </div>
         <br />
-        <div className='username p-4'>
+        <div
+          className='username p-4'
+          data-aos='fade-up'
+          data-aos-offset='200'
+          data-aos-easing='ease-in-sine'
+          data-aos-duration='600'
+        >
           <label htmlFor='email'>Email*</label> <br />
           <input
             name='email'
@@ -173,7 +226,13 @@ const Usersprofile = () => {
           required
         />{' '} */}
         <br />
-        <div className='username p-4'>
+        <div
+          className='username p-4'
+          data-aos='fade-up'
+          data-aos-offset='200'
+          data-aos-easing='ease-in-sine'
+          data-aos-duration='600'
+        >
           <label htmlFor='gender'>Gender*</label> <br />
           <input
             name='gender'
@@ -184,7 +243,13 @@ const Usersprofile = () => {
           />{' '}
         </div>
         <br />
-        <div className='username p-4'>
+        <div
+          className='username p-4'
+          data-aos='fade-up'
+          data-aos-offset='200'
+          data-aos-easing='ease-in-sine'
+          data-aos-duration='600'
+        >
           <label htmlFor='agegroup'>Age Group*</label> <br />
           <input
             name='agegroup'
@@ -203,7 +268,13 @@ const Usersprofile = () => {
           </small>
         </div>
         <br />
-        <div className='username p-4'>
+        <div
+          className='username p-4'
+          data-aos='fade-up'
+          data-aos-offset='200'
+          data-aos-easing='ease-in-sine'
+          data-aos-duration='600'
+        >
           <label htmlFor='religon'>Religion*</label> <br />
           <input
             name='religon'
@@ -223,7 +294,13 @@ const Usersprofile = () => {
           </small>
         </div>
         <br />
-        <div className='username p-4'>
+        <div
+          className='username p-4'
+          data-aos='fade-up'
+          data-aos-offset='200'
+          data-aos-easing='ease-in-sine'
+          data-aos-duration='600'
+        >
           <label htmlFor='discipline'>Discipline*</label> <br />
           <input
             name='discipline'
@@ -243,7 +320,13 @@ const Usersprofile = () => {
           </small>
         </div>
         <br />
-        <div className='username p-4'>
+        <div
+          className='username p-4'
+          data-aos='fade-up'
+          data-aos-offset='200'
+          data-aos-easing='ease-in-sine'
+          data-aos-duration='600'
+        >
           <label htmlFor='gender1'>Gender*</label> <br />
           <input
             name='gender1'
@@ -258,7 +341,13 @@ const Usersprofile = () => {
           </small>
         </div>
         <br />
-        <div className='username p-4'>
+        <div
+          className='username p-4'
+          data-aos='fade-up'
+          data-aos-offset='200'
+          data-aos-easing='ease-in-sine'
+          data-aos-duration='600'
+        >
           <label htmlFor='smoking'>
             Can you stay with a person that smokes?*
           </label>{' '}
@@ -276,7 +365,13 @@ const Usersprofile = () => {
           </small>
         </div>
         <br />
-        <div className='username p-4'>
+        <div
+          className='username p-4'
+          data-aos='fade-up'
+          data-aos-offset='200'
+          data-aos-easing='ease-in-sine'
+          data-aos-duration='600'
+        >
           <label htmlFor='alcohol'>
             Can you stay with a person that takes alcohol?*
           </label>{' '}
@@ -294,7 +389,13 @@ const Usersprofile = () => {
           </small>
         </div>
         <br />
-        <div className='username p-4'>
+        <div
+          className='username p-4'
+          data-aos='fade-up'
+          data-aos-offset='200'
+          data-aos-easing='ease-in-sine'
+          data-aos-duration='600'
+        >
           <label htmlFor='uncleanliness'>
             Can you tolerate uncleanliness?*
           </label>{' '}
@@ -312,7 +413,13 @@ const Usersprofile = () => {
           </small>
         </div>
         <br />
-        <div className='username p-4'>
+        <div
+          className='username p-4'
+          data-aos='fade-up'
+          data-aos-offset='200'
+          data-aos-easing='ease-in-sine'
+          data-aos-duration='600'
+        >
           <label htmlFor='lateness'>Can you tolerate lateness?</label> <br />
           <input
             name='lateness'
@@ -327,7 +434,13 @@ const Usersprofile = () => {
           </small>
         </div>
         <br />
-        <div className='username p-4'>
+        <div
+          className='username p-4'
+          data-aos='fade-up'
+          data-aos-offset='200'
+          data-aos-easing='ease-in-sine'
+          data-aos-duration='600'
+        >
           <label htmlFor='homepartying'>Can you tolerate homepartying?*</label>{' '}
           <br />
           <input

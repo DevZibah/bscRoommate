@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import { FaCheck } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
@@ -7,13 +9,16 @@ import svg1 from '../assets/secondimage.svg'
 import svg2 from '../assets/thirdimage.svg'
 import svg3 from '../assets/fourth.svg'
 const Cover = () => {
+  useEffect(() => {
+    Aos.init()
+  }, [])
   return (
     <div>
       <div className='firstdiv'>
-        <nav class='navbar navbar-expand-lg'>
+        <nav className='navbar navbar-expand-lg'>
           <h4 className='logo'>HiRoomie</h4>
           <button
-            class='navbar-toggler'
+            className='navbar-toggler'
             type='button'
             data-toggle='collapse'
             data-target='#navbarNav'
@@ -21,10 +26,10 @@ const Cover = () => {
             aria-expanded='false'
             aria-label='Toggle navigation'
           >
-            <i class='fas fa-bars ham'></i>
+            <i className='fas fa-bars ham'></i>
           </button>
           <div
-            class='
+            className='
             collapse
             navbar-collapse
             text-center
@@ -33,7 +38,7 @@ const Cover = () => {
           '
             id='navbarNav'
           >
-            <ul class='navbar-nav mt-3 cc-ul'>
+            <ul className='navbar-nav mt-3 cc-ul'>
               <Link to='/SignUp' className='signup'>
                 <button>SignUp</button>
               </Link>
@@ -44,7 +49,13 @@ const Cover = () => {
           </div>
         </nav>
       </div>
-      <div className='cll'>
+      <div
+        className='cll'
+        data-aos='fade-up'
+        data-aos-offset='200'
+        data-aos-easing='ease-in-sine'
+        data-aos-duration='600'
+      >
         <div className='image-one'>
           <img src={svg} alt='svg' className='image1' />
         </div>
@@ -59,7 +70,13 @@ const Cover = () => {
           </Link>
         </article>
       </div>
-      <section className='section-one'>
+      <section
+        className='section-one'
+        data-aos='fade-up'
+        data-aos-offset='200'
+        data-aos-easing='ease-in-sine'
+        data-aos-duration='600'
+      >
         <h4 className='rome'>Why should you use HiRoomie?</h4>
         <div className='grid'>
           <div className='grid-div gridd'>
@@ -90,7 +107,13 @@ const Cover = () => {
           </div>
         </div>
       </section>
-      <section className='ano-sec'>
+      <section
+        className='ano-sec'
+        data-aos='fade-up'
+        data-aos-offset='200'
+        data-aos-easing='ease-in-sine'
+        data-aos-duration='600'
+      >
         <div className='grid grdd'>
           <div className='ano-image'>
             <img src={svg3} alt='image4' />
