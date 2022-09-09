@@ -20,7 +20,7 @@ const Signup = () => {
       password2: password2,
     }
 
-    fetch('http://127.0.0.1:8000/api/v1/rest-auth/registration/', {
+    fetch('https://project-roommate.herokuapp.com/api/v1/rest-auth/registration/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -32,7 +32,9 @@ const Signup = () => {
         if (data.key) {
           localStorage.clear()
           localStorage.setItem('token', data.key)
-          window.location.replace('http://localhost:3000/usersprofile')
+          window.location.replace(
+            'https://bscroommate.netlify.app/usersprofile'
+          )
         } else {
           setUsername('')
           setEmail('')

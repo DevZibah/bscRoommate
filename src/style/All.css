@@ -41,6 +41,7 @@ body {
   .logo {
     color: rgb(108, 99, 255);
     font-family: fantasy;
+    cursor: pointer;
   }
   .image-one {
     border: 1px solid white;
@@ -496,10 +497,13 @@ body {
     padding: 1rem;
     box-shadow: 2px 2px rgb(108, 99, 255);
   }
+  .closse{
+    justify-content: space-between;
+  }
 }
 @media (min-width: 768px) {
   body {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     font-size: 18px;
     color: black;
     width: 100%;
@@ -524,6 +528,7 @@ body {
   .logo {
     color: rgb(108, 99, 255);
     font-family: fantasy;
+    cursor: pointer;
   }
   .signup {
     padding: 0.3rem;
@@ -999,5 +1004,8 @@ body {
     text-align: start;
     padding: 1rem;
     box-shadow: 2px 2px rgb(108, 99, 255);
+  }
+  .closse{
+    justify-content: space-between;
   }
 }

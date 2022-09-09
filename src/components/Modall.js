@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
+import Modallll from './Modallll'
 import User from './User'
 
 const Modall = (props) => {
   const [state, setState] = useState(props.item)
+  const [show1, setShow1] = useState(false)
+
   if (!props.show) {
     return null
   }
   return (
-    <div className='modal p-3' onClick={props.onClose}>
+    <div className='modal p-3'>
       <div
         className='modal-content p-3'
         data-aos='zoom-in'
@@ -16,8 +19,15 @@ const Modall = (props) => {
         data-aos-duration='600'
       >
         <div className='modal-title'>
-          <div>
-            <h4 className='logo'>HiRoomie</h4>
+          <div className='d-flex closse'>
+            <div>
+              <h4 className='logo'>HiRoomie</h4>
+            </div>
+            <div>
+              <h4 onClick={props.onClose} className='logo'>
+                Close
+              </h4>
+            </div>
           </div>
           <div className='flex mt-3'>
             <h6>
@@ -92,7 +102,10 @@ const Modall = (props) => {
           </div>
         </div>
         <div className='modal-footer'>
-          <button className='button'>Select Roommate</button>
+          <button onClick={() => setShow1(true)} className='button'>
+            Select Roommate
+          </button>
+          <Modallll show1={show1} onClose={() => setShow1(false)} />
         </div>
       </div>
     </div>

@@ -22,7 +22,7 @@ const Dashboard = () => {
   })
   useEffect(() => {
     if (localStorage.getItem('token') == null) {
-      window.location.replace('http://localhost:3000/login')
+      window.location.replace('https://bscroommate.netlify.app/login')
     } else {
       setLoading(false)
     }
@@ -31,7 +31,7 @@ const Dashboard = () => {
   const handleLogout = (e) => {
     e.preventDefault()
 
-    fetch('http://127.0.0.1:8000/api/v1/rest-auth/logout/', {
+    fetch('https://project-roommate.herokuapp.com/api/v1/rest-auth/logout/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -42,16 +42,16 @@ const Dashboard = () => {
       .then((data) => {
         console.log(data)
         localStorage.clear()
-        window.location.replace('http://localhost:3000')
+        window.location.replace('https://bscroommate.netlify.app')
       })
   }
 
   useEffect(() => {
     //  checks to see if a user is authenticated in line 9
     if (localStorage.getItem('token') === null) {
-      window.location.replace('http://localhost:3000/login')
+      window.location.replace('https://bscroommate.netlify.app')
     } else {
-      fetch('http://127.0.0.1:8000/api/v1/', {
+      fetch('https://project-roommate.herokuapp.com/api/v1/', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -69,9 +69,9 @@ const Dashboard = () => {
   useEffect(() => {
     //  checks to see if a user is authenticated in line 9
     if (localStorage.getItem('token') === null) {
-      window.location.replace('http://localhost:3000/login')
+      window.location.replace('https://bscroommate.netlify.app')
     } else {
-      fetch('http://127.0.0.1:8000/api/v1/rest-auth/user', {
+      fetch('https://project-roommate.herokuapp.com/api/v1/rest-auth/user', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

@@ -50,7 +50,7 @@ const Usersprofile = () => {
       lateness: lateness,
       homepartying: homepartying,
     }
-    var url = 'http://127.0.0.1:8000/api/v1/'
+    var url = 'https://project-roommate.herokuapp.com/api/v1/'
     fetch(url, {
       method: 'POST',
       headers: {
@@ -79,7 +79,7 @@ const Usersprofile = () => {
         setLateness('')
         setHomepartying('')
         window.alert('profile created successfully')
-        window.location.replace('http://localhost:3000/dashboard')
+        window.location.replace('https://bscroommate.netlify.app/dashboard')
         setErrors(true)
       })
       .catch(function (error) {
