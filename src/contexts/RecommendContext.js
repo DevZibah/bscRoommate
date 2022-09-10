@@ -17,7 +17,7 @@ const RecommendContextProvider = ({ children }) => {
 
   useEffect(() => {
     if (localStorage.getItem('token') === null) {
-      window.location.replace('https://bscroommate.netlify.app/login')
+      window.location.replace('https://bscroommate.netlify.app/login/')
     } else {
       fetch('https://project-roommate.herokuapp.com/api/v1/rest-auth/user', {
         method: 'GET',
@@ -36,7 +36,7 @@ const RecommendContextProvider = ({ children }) => {
 
   useEffect(() => {
     if (localStorage.getItem('token') === null) {
-      window.location.replace('https://bscroommate.netlify.app/login')
+      window.location.replace('https://bscroommate.netlify.app/login/')
     } else {
       fetch('https://project-roommate.herokuapp.com/api/v1/', {
         method: 'GET',

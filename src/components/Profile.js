@@ -7,7 +7,7 @@ const Profile = (props) => {
   useEffect(() => {
     //  checks to see if a user is authenticated in line 9
     if (localStorage.getItem('token') === null) {
-      window.location.replace('https://bscroommate.netlify.app')
+      window.location.replace('https://bscroommate.netlify.app/')
     } else {
       fetch('https://project-roommate.herokuapp.com/api/v1/', {
         method: 'GET',

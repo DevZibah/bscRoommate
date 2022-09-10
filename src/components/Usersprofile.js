@@ -79,7 +79,7 @@ const Usersprofile = () => {
         setLateness('')
         setHomepartying('')
         window.alert('profile created successfully')
-        window.location.replace('https://bscroommate.netlify.app/dashboard')
+        window.location.replace('https://bscroommate.netlify.app/dashboard/')
         setErrors(true)
       })
       .catch(function (error) {
