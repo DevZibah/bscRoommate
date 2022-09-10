@@ -22,7 +22,7 @@ const Dashboard = () => {
   })
   useEffect(() => {
     if (localStorage.getItem('token') == null) {
-      window.location.replace('https://bscroommate.netlify.app/login/')
+      window.location.replace('https://bscroommate.netlify.app/login')
     } else {
       setLoading(false)
     }
@@ -42,14 +42,14 @@ const Dashboard = () => {
       .then((data) => {
         console.log(data)
         localStorage.clear()
-        window.location.replace('https://bscroommate.netlify.app/')
+        window.location.replace('https://bscroommate.netlify.app')
       })
   }
 
   useEffect(() => {
     //  checks to see if a user is authenticated in line 9
     if (localStorage.getItem('token') === null) {
-      window.location.replace('https://bscroommate.netlify.app/')
+      window.location.replace('https://bscroommate.netlify.app')
     } else {
       fetch('https://project-roommate.herokuapp.com/api/v1/', {
         method: 'GET',
@@ -69,7 +69,7 @@ const Dashboard = () => {
   useEffect(() => {
     //  checks to see if a user is authenticated in line 9
     if (localStorage.getItem('token') === null) {
-      window.location.replace('https://bscroommate.netlify.app/')
+      window.location.replace('https://bscroommate.netlify.app')
     } else {
       fetch('https://project-roommate.herokuapp.com/api/v1/rest-auth/user', {
         method: 'GET',

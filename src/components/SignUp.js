@@ -33,7 +33,7 @@ const Signup = () => {
           localStorage.clear()
           localStorage.setItem('token', data.key)
           window.location.replace(
-            'https://bscroommate.netlify.app/usersprofile/'
+            'https://bscroommate.netlify.app/usersprofile'
           )
         } else {
           setUsername('')

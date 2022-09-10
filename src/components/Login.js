@@ -13,7 +13,7 @@ const Login = () => {
   //   This is because if the user is already authenticated, you don’t want to display a login page again. Instead, you will redirect them to the dashboard
   useEffect(() => {
     if (localStorage.getItem('token') !== null) {
-      window.location.replace('https://bscroommate.netlify.app/dashboard/')
+      window.location.replace('https://bscroommate.netlify.app/dashboard')
     } else {
       setLoading(false)
     }
@@ -41,7 +41,7 @@ const Login = () => {
         if (data.key) {
           localStorage.clear()
           localStorage.setItem('token', data.key)
-          window.location.replace('https://bscroommate.netlify.app/dashboard/')
+          window.location.replace('https://bscroommate.netlify.app/dashboard')
         } else {
           setUsername('')
           setEmail('')

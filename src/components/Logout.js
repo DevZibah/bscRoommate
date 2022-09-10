@@ -6,7 +6,7 @@ const Logout = () => {
 
   useEffect(() => {
     if (localStorage.getItem('token') == null) {
-      window.location.replace('https://bscroommate.netlify.app/login/')
+      window.location.replace('https://bscroommate.netlify.app/login')
     } else {
       setLoading(false)
     }
@@ -26,7 +26,7 @@ const Logout = () => {
       .then((data) => {
         console.log(data)
         localStorage.clear()
-        window.location.replace('https://bscroommate.netlify.app/')
+        window.location.replace('https://bscroommate.netlify.app')
       })
   }
 
