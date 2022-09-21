@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react'
+import { AiFillEye } from 'react-icons/ai'
+import { AiFillEyeInvisible } from 'react-icons/ai'
 
 const Login = () => {
   // The email and password states set in lines 4 and 5 are used for form control.These values are updated when the user types.
   const [username, setUsername] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [show, setShow] = useState(false)
+
   //   The errors state is present to push any errors into in case there are any. If there are errors, you can see from line 50 that it will be rendered.
   const [errors, setErrors] = useState(false)
   //   The loading state is used to allow a buffer between when the login page is requested, and when it is actually rendered.
@@ -52,6 +56,10 @@ const Login = () => {
       })
   }
 
+  const handleShowHide = () => {
+    setShow(!show)
+  }
+
   return (
     <div className='form1 p-4'>
       {errors === true && <h2>Cannot log in with provided credentials</h2>}
@@ -85,12 +93,17 @@ const Login = () => {
             <br />
             <input
               name='password'
-              type='password'
+              type={show ? 'text' : 'password'}
               value={password}
               placeholder='Password'
               required
               onChange={(e) => setPassword(e.target.value)}
             />{' '}
+            {show ? (
+              <AiFillEye className='eye' onClick={handleShowHide} />
+            ) : (
+              <AiFillEyeInvisible className='eye' onClick={handleShowHide} />
+            )}
             <br />
             <input type='submit' value='Login' />
           </form>

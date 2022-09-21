@@ -497,8 +497,16 @@ body {
     padding: 1rem;
     box-shadow: 2px 2px rgb(108, 99, 255);
   }
-  .closse{
+  .closse {
     justify-content: space-between;
+  }
+  .eye {
+    position: absolute;
+    transform: translate(-2.2rem, 1.5rem);
+  }
+  .paragh {
+    text-align: start;
+    font-size: smaller;
   }
 }
 @media (min-width: 768px) {
@@ -1005,7 +1013,18 @@ body {
     padding: 1rem;
     box-shadow: 2px 2px rgb(108, 99, 255);
   }
-  .closse{
+  .closse {
     justify-content: space-between;
+  }
+}
+@media (min-width: 1024px) {
+  .eye {
+    position: absolute;
+    transform: translate(-2.2rem, 1.5rem);
+    cursor: pointer;
+  }
+  .paragh {
+    text-align: start;
+    font-size: smaller;
   }
 }
