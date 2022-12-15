@@ -17,7 +17,7 @@ const Login = () => {
   //   This is because if the user is already authenticated, you don’t want to display a login page again. Instead, you will redirect them to the dashboard
   useEffect(() => {
     if (localStorage.getItem('token') !== null) {
-      window.location.replace('https://bscroommate.netlify.app/dashboard')
+      window.location.replace('http://localhost:3000/dashboard')
     } else {
       setLoading(false)
     }
@@ -32,7 +32,7 @@ const Login = () => {
       username: username,
     }
 
-    fetch('https://project-roommate.herokuapp.com/api/v1/rest-auth/login/', {
+    fetch('http://127.0.0.1:8000/api/v1/rest-auth/login/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ const Login = () => {
         if (data.key) {
           localStorage.clear()
           localStorage.setItem('token', data.key)
-          window.location.replace('https://bscroommate.netlify.app/dashboard')
+          window.location.replace('http://localhost:3000/dashboard')
         } else {
           setUsername('')
           setEmail('')

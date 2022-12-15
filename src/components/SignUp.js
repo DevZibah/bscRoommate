@@ -23,24 +23,19 @@ const Signup = () => {
       password2: password2,
     }
 
-    fetch(
-      'https://project-roommate.herokuapp.com/api/v1/rest-auth/registration/',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(user),
-      }
-    )
+    fetch('http://127.0.0.1:8000/api/v1/rest-auth/registration/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user),
+    })
       .then((res) => res.json())
       .then((data) => {
         if (data.key) {
           localStorage.clear()
           localStorage.setItem('token', data.key)
-          window.location.replace(
-            'https://bscroommate.netlify.app/usersprofile'
-          )
+          window.location.replace('http://localhost:3000/usersprofile')
         } else {
           setUsername('')
           setEmail('')

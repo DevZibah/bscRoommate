@@ -6,7 +6,7 @@ const Logout = () => {
 
   useEffect(() => {
     if (localStorage.getItem('token') == null) {
-      window.location.replace('https://bscroommate.netlify.app/login')
+      window.location.replace('http://localhost:3000/login')
     } else {
       setLoading(false)
     }
@@ -15,7 +15,7 @@ const Logout = () => {
   const handleLogout = (e) => {
     e.preventDefault()
 
-    fetch('https://project-roommate.herokuapp.com/api/v1/rest-auth/logout/', {
+    fetch('http://127.0.0.1:8000/api/v1/rest-auth/logout/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -26,7 +26,7 @@ const Logout = () => {
       .then((data) => {
         console.log(data)
         localStorage.clear()
-        window.location.replace('https://bscroommate.netlify.app')
+        window.location.replace('http://localhost:3000')
       })
   }
 

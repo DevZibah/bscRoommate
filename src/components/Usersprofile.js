@@ -50,7 +50,7 @@ const Usersprofile = () => {
       lateness: lateness,
       homepartying: homepartying,
     }
-    var url = 'https://project-roommate.herokuapp.com/api/v1/'
+    var url = 'http://127.0.0.1:8000/api/v1/'
     fetch(url, {
       method: 'POST',
       headers: {
@@ -79,7 +79,7 @@ const Usersprofile = () => {
         setLateness('')
         setHomepartying('')
         window.alert('profile created successfully')
-        window.location.replace('https://bscroommate.netlify.app/dashboard')
+        window.location.replace('http://localhost:3000/dashboard')
         setErrors(true)
       })
       .catch(function (error) {
@@ -361,7 +361,7 @@ const Usersprofile = () => {
           />{' '}
           <br />
           <small className='hints'>
-            <span className='hint'>Hint*</span> Answer with either yes or no
+            <span className='hint'>Hint*</span> Answer with either (yes/no)
           </small>
         </div>
         <br />
@@ -385,7 +385,7 @@ const Usersprofile = () => {
           />{' '}
           <br />
           <small className='hints'>
-            <span className='hint'>Hint*</span> Answer with either yes or no
+            <span className='hint'>Hint*</span> Answer with either (yes/no)
           </small>
         </div>
         <br />
@@ -409,7 +409,7 @@ const Usersprofile = () => {
           />{' '}
           <br />
           <small className='hints'>
-            <span className='hint'>Hint*</span> Answer with either yes or no
+            <span className='hint'>Hint*</span> Answer with either (yes/no)
           </small>
         </div>
         <br />
@@ -430,7 +430,7 @@ const Usersprofile = () => {
           />{' '}
           <br />
           <small className='hints'>
-            <span className='hint'>Hint*</span> Answer with either yes or no
+            <span className='hint'>Hint*</span> Answer with either (yes/no)
           </small>
         </div>
         <br />
@@ -452,21 +452,10 @@ const Usersprofile = () => {
           />{' '}
           <br />
           <small className='hints'>
-            <span className='hint'>Hint*</span> Answer with either yes or no
+            <span className='hint'>Hint*</span> Answer with either (yes/no)
           </small>
         </div>
         <br />
-        {/* <div className='usernamee p-4'>
-          <label htmlFor='image'>Upload your image here*</label>{' '}
-          <input
-            name='image'
-            type='file'
-            accept='.png, .jpg, .jpeg'
-            value={image}
-            onChange={(e) => setImage(e.target.value)}
-            required
-          />{' '}
-        </div> */}
         <br />
         <div className='buttoon'>
           <input type='submit' value='Get Started' />
