@@ -1,7 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+This is a roommate recommendation project that eliminates the need to search for a compatible roommate manually. 
 ## Available Scripts
 
 In the project directory, you can run:
